@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+.env
+.next/
+dist/
+build/
+*.log
+*.DS_Store
+
+# VSCode
+.vscode/
+
+# OS-specific
+Thumbs.db
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo
+
+.env
+.env.local
+.env.development
