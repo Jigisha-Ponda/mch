@@ -8,12 +8,12 @@ import blog_thumb_1 from "@/assets/img/blog/feeds-thumb-1.jpg";
 import blog_thumb_2 from "@/assets/img/blog/feeds-thumb-2.jpg";
 import blog_thumb_3 from "@/assets/img/blog/feeds-thumb-3.jpg";
 
-import footer_logo_three from "@/assets/img/logo/footer-logo-3.png";
+import footer_logo_three from "@/assets/img/mch/logo.webp";
 
 interface DataType {
   sm_des: string;
   email: string;
-  website: string;
+  phone: string;
   address: string;
   link_data: {
     title: string;
@@ -33,9 +33,9 @@ interface DataType {
 
 const footer_content: DataType = {
   sm_des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
-  email: "info@examplemedical.com",
-  website: "examplemedical.com",
-  address: "227 Marion Street, Columbia",
+  email: "care@mch.org.in",
+  phone:"9262966541 || 06217960945",
+  address: "At- Chandani Chowk, Brijbihari Lane, Krishna Toli, Muzaffarpur-842003",
 
   link_data: [
     {
@@ -77,7 +77,7 @@ const footer_content: DataType = {
     },
   ]
 }
-const { sm_des, email, website, address, link_data, footer_blog_data } = footer_content
+const { sm_des, email, phone, address, link_data, footer_blog_data } = footer_content
 
 
 const FooterThree = () => {
@@ -98,7 +98,7 @@ const FooterThree = () => {
                   <div className="footer-emailing">
                     <ul>
                       <li><i className="far fa-envelope"></i>{email}</li>
-                      <li><i className="far fa-clone"></i>{website}</li>
+                      <li><i className="far fa-envelope"></i>{phone}</li>
                       <li><i className="far fa-flag"></i>{address}</li>
                     </ul>
                   </div>

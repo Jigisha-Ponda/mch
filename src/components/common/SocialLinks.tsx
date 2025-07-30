@@ -155,8 +155,7 @@ type CopyRightDataType = {
 }
 
 const copy_right_text: CopyRightDataType = {
-  copy_right: <> ©{new Date().getFullYear()} Copyrights by company. All Rights Reserved. Designed by
-    <Link target="_blank" href="https://themeforest.net/user/theme_pure/portfolio" style={{ color: "#fff" }}> Theme_Pure. </Link>
+  copy_right: <> Copyright © 2023-2025 || MCH Hospital || All Rights Reserved || Powered By Bodhi Life
   </>,
 }
 

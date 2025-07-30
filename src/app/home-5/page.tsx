@@ -4,7 +4,7 @@ import Wrapper from '@/layout/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Home Five MediDove React Next js Tempalte",
+  title: "Home",
 };
 
 

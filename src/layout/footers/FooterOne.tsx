@@ -28,7 +28,7 @@ const footer_content:FooterContentDatatype = {
   number_text: "Emergency number",
   number: "202-555-0104",
   sm_info: "incididunt lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
-  email: "info@examplemedical.com",
+  email: "care@mch.org.in",
   website: "examplemedical.com",
   address: "227 Marion Street, Columbia",
   footer_links: [

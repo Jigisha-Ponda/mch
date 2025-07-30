@@ -26,13 +26,13 @@ const header_contact_data: DataType[] = [
     id: 1,
     img: message_icon,
     title: "Email Address",
-    info: "infomail@medidove.com",
+    info: "care@mch.org.in",
   },
   {
     id: 2,
     img: phone_icon,
     title: "Phone Number",
-    info: "+87 (676) 6765 764",
+    info: "9262966541 || 06217960945",
   },
 ]
 

@@ -5,11 +5,11 @@ import Breadcrumb from '../common/breadcrumb/Breadcrumb';
 import AboutVideoArea from './AboutVideoArea';
 import AboutCounterArea from './AboutCounterArea';
 import AboutAppoinment from './AboutAppoinment';
-import TeamAreaHomeOne from '../homes/home/TeamAreaHomeOne';
-import FactAreaHomeOne from '../homes/home/FactAreaHomeOne';
 import AboutTestimonialsArea from './AboutTestimonialsArea';
 import AboutAnalysisArea from './AboutAnalysisArea';
 import FooterThree from '@/layout/footers/FooterThree';
+import TeamAreaHomeOne from '../homes/home/TeamAreaHomeOne';
+import FactAreaHomeOne from '../homes/home/FactAreaHomeOne';
 
 const About = () => {
   return (

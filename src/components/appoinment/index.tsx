@@ -1,16 +1,15 @@
-
-import HeaderOne from '@/layout/headers/HeaderOne';
 import React from 'react';
 import Breadcrumb from '../common/breadcrumb/Breadcrumb';
 import AppointmentAboutArea from './AppointmentAboutArea';
 import AppoinmentCalculateArea from './AppoinmentCalculateArea';
-import LatestNewsAreaHomeOne from "./../homes/home/LatestNewsAreaHomeOne";
 import FooterThree from "@/layout/footers/FooterThree";
+import HeaderFour from '@/layout/headers/HeaderFour';
+import LatestNewsAreaHomeOne from '../homes/home/LatestNewsAreaHomeOne';
 
 const Appoinment = () => {
   return (
     <>
-      <HeaderOne />
+      <HeaderFour />
       <main>
         <Breadcrumb sub_title='We are here for your care.' title='Appoinment' page='Appoinment' />
         <AppointmentAboutArea />
