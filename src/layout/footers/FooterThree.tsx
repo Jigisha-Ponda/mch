@@ -32,7 +32,7 @@ interface DataType {
 }
 
 const footer_content: DataType = {
-  sm_des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
+  sm_des: " At MCH, we are committed to delivering world-class healthcare with advanced technology and compassionate care. Your well-being is our mission.",
   email: "care@mch.org.in",
   phone:"9262966541 || 06217960945",
   address: "At- Chandani Chowk, Brijbihari Lane, Krishna Toli, Muzaffarpur-842003",
@@ -41,14 +41,14 @@ const footer_content: DataType = {
     {
       title: "Departments",
       links: [
-        { title: "Surgery and Radiology", link: "#" },
+        { title: "Obstetrics and gynaecology", link: "#" },
         { title: "Departments", link: "#" },
         { title: "Family Medicine", link: "#" },
         { title: "Our Doctors", link: "#" },
         { title: "Women's Health", link: "#" },
         { title: "News", link: "#" },
         { title: "Optician", link: "#" },
-        { title: "Shop", link: "#" },
+        // { title: "Shop", link: "#" },
         { title: "Pediatrics", link: "#" },
         { title: "Contact Us", link: "#" },
         { title: "Dermatology", link: "#" },

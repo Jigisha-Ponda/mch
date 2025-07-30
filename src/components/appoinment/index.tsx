@@ -14,7 +14,7 @@ const Appoinment = () => {
         <Breadcrumb sub_title='We are here for your care.' title='Appoinment' page='Appoinment' />
         <AppointmentAboutArea />
         <AppoinmentCalculateArea />
-        <LatestNewsAreaHomeOne style={true} />
+        {/* <LatestNewsAreaHomeOne style={true} /> */}
       </main>
       <FooterThree />
     </>

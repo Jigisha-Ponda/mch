@@ -6,6 +6,7 @@ import NavMenu from './Menu/NavMenu';
 import UseSticky from '@/hooks/UseSticky';
 import HeaderLogo from "@/assets/img/mch/logo.webp";
 import { TeamSocialLinks } from '@/components/common/SocialLinks';
+import plag_icon from '@/assets/img/icon/lang.png';
 import MobileMenus from './Menu/MobileMenus';
 
 const header_4_content = { 
@@ -38,9 +39,9 @@ const HeaderFour = () => {
                 <div className="top4-right d-flex justify-content-end">
                   <div className="top4-menu">
                     <ul className="list-inline">
-                      <li><a className="need-help" href="#">{help}</a></li>
-                      <li><a href="#">{setting}</a></li>
-                      <li><a href="#">{media}</a></li>
+                      <li><a className="need-help" href="/contact">{help}</a></li>
+                      {/* <li><a href="#">{setting}</a></li> */}
+                      {/* <li><a href="#">{media}</a></li> */}
                     </ul>
                   </div>
                   <div className="header-social-icons top4-social d-none d-xl-block">

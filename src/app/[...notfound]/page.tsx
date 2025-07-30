@@ -4,7 +4,7 @@ import Wrapper from '@/layout/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "404 Page MediDove React Next js Tempalte",
+  title: "404 Page",
 };
 const index = () => {
   return (

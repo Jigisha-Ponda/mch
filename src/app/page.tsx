@@ -3,7 +3,7 @@ import Wrapper from '@/layout/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Main Home MediDove React Next js Tempalte",
+  title: "Home",
 };
 
 const HomeMain = () => {

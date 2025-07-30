@@ -76,7 +76,7 @@ const ServicesAreaHomeFour = ({ style }: any) => {
                 </div>
                 <div className="section-text pos-rel">
                   <h5>Departments</h5>
-                  <h1>Managed Your Heathcare Services</h1>
+                  <h1>Managed Your Healthcare Services</h1>
                 </div>
                 <div className="section-line pos-rel">
                   <Image src={title_line} alt="" />

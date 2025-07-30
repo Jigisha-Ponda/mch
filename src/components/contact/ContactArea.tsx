@@ -13,21 +13,21 @@ const contact_data: DataType[] = [
     id: 1,
     icon: "fas fa-envelope",
     title: "Mail Here",
-    info_1: "admin@BasicTheme.com",
-    info_2: "info@Themepur.com",
+    info_1: "care@mch.org.in",
+    info_2: "",
   },
   {
     id: 2,
     icon: "fas fa-map-marker-alt",
     title: "Visit Here",
-    info_1: "27 Division St, New York, NY 10002,Jaklina, United Kingpung",
+    info_1: "At- Chandani Chowk, Brijbihari Lane, Krishna Toli, Muzaffarpur-842003",
   },
   {
     id: 3,
     icon: "fas fa-phone",
     title: "Call Here",
-    info_1: "+8 (123) 985 789",
-    info_2: "+787 878897 87",
+    info_1: "9262966541",
+    info_2: "06217960945",
   },
 ]
 

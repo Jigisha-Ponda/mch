@@ -9,24 +9,22 @@ import about_shape from "@/assets/img/about/about-shape.png";
 import destination_1 from "@/assets/img/about/destination-icon-1.png";
 import destination_2 from "@/assets/img/about/destination-icon-2.png";
 
-
-
 const appoinment_content = {
   sub_title: "About Us",
-  title: "Short Story About MediDove Clinic.",
-  sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute  irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+  title: "Short Story About MCH",
+  sm_des: "We are a well-established healthcare institution built to provide both medical and surgical treatment, staffed with qualified professionals and equipped for accurate diagnosis and patient care. Our hospital also serves as a center for medical research and teaching. With dedicated healthcare teams and advanced facilities, we aim to deliver compassionate, high-quality care. Patients consistently share positive feedback about our well-managed services, coordinated testing, and the genuine care provided by our staff and doctors.",
   features: [
     {
       id: 1,
       img: destination_1,
       title: "Our Mission",
-      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      sm_des: "To provide compassionate, affordable, and quality healthcare services through cutting-edge technology and skilled medical professionals. We are committed to improving lives by delivering patient-centered care, promoting wellness, and maintaining the highest ethical and professional standards.",
     },
     {
       id: 2,
       img: destination_2,
-      title: "Our Vission",
-      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      title: "Our Vision",
+      sm_des: "To become a leading healthcare institution known for excellence in patient care, innovation, and medical research. We aim to transform lives by delivering world-class treatment, fostering trust, and advancing healthcare standards to build a healthier future for all.",
     },
   ]
 }

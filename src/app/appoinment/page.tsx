@@ -4,7 +4,7 @@ import Wrapper from '@/layout/Wrapper';
 import Appoinment from '@/components/appoinment';
 
 export const metadata = {
-  title: "Appoinment MediDove React Next js Tempalte",
+  title: "Appointment",
 };
 
 const index = () => {

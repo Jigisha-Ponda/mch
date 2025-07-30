@@ -7,9 +7,6 @@ import back_icon from "@/assets/img/section/section-back-icon.png";
 import title_line from "@/assets/img/shape/section-title-line.png";
 import ImagePopup from "@/modals/ImagePopup"
 
-  
-
-
 // data
 const categories = ["All", ...new Set(photo_gallery_data.map((item) => item.category))];
 // const categories = ["All Collection", "Trending", "Beauty", "Cosmetics"];
@@ -94,7 +91,7 @@ const PhotoGalleryHomeFive = () => {
               <div key={i} className="col-lg-4 col-md-6 grid-gallery">
                 <div className="h5gallery__wrapper pos-rel text-center mb-30">
                   <div className="h5gallery-thumb">
-                    <Image className="img" src={item?.img} alt="theme-pure" />
+                    <Image className="img" src={item?.img} alt="theme-pure" style={{ height: "400px" }}/>
                   </div>
                   <div className="h5gallery-content">
                     <a className="popup-image" 
@@ -104,9 +101,9 @@ const PhotoGalleryHomeFive = () => {
                       <i className="fal fa-plus"></i>
                     </a>
                     <h4 className="white-color">
-                      <Link href="/portfolio-details">{item.title}</Link>
+                      <Link href="">{item.title}</Link>
                     </h4>
-                    <span><Link href="#">{item.tag_1}</Link> . <Link href="#">{item.tag_2}</Link></span>
+                    {/* <span><Link href="#">{item.tag_1}</Link> . <Link href="#">{item.tag_2}</Link></span> */}
                   </div>
                 </div>
               </div>

@@ -32,15 +32,16 @@ const TeamAreaHomeFour = () => {
             {team_data.map((item, i) =>
               <>
                 {item.home === 4 &&
-                  <div key={i} className="col-xl-3 col-lg-4 col-md-6">
+                  <div key={i} className="col-xl-3 col-lg-4 col-md-6 mx-auto">
                     <div className="team-box text-center mb-60">
                       <div className="team-thumb h4team-thumb mb-25 pos-rel">
-                        <Image src={item.img} alt="" />
+                        <Image src={item.img} alt=""  style={{ width: '215px', height: '215px', overflow: 'hidden', borderRadius: '50%', cursor: 'pointer' }}/>
                         <Link className="team-link" href="/doctor-details">0{item.id}</Link>
                       </div>
                       <div className="team-content h4team-content mb-15">
                         <h3>{item.name}</h3>
                         <h6>{item.job_title}</h6>
+                        <h6>{item.job_subtitle}</h6>
                       </div>
                       <div className="h4team-social">
                         <ul className="list-inline">

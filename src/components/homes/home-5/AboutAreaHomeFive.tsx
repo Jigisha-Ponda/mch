@@ -27,6 +27,7 @@ interface DataType {
     day_2?: string;
     time_1?: string;
     time_2?: string;
+    time_3?:string;
     day_3?: string;
     closed?: string;
   })[];
@@ -34,7 +35,7 @@ interface DataType {
 
 
 const about_content: DataType = {
-  sub_title: "MediDove help increase your readers.",
+  sub_title: "MCH help increase your readers.",
   title: "25+ Years Of Since We Provide Medical Serving",
   about_data: [
     {
@@ -42,8 +43,8 @@ const about_content: DataType = {
       color_bg: "theme-bg",
       bg_img: bg_icon_1,
       img: icon_1,
-      title: "Energercy Case",
-      sm_des: "Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give complete",
+      title: "Clinic News",
+      sm_des: "We strive to provide affordable, high-quality healthcare to everyone, ensuring compassionate and personalized treatment for every patient.",
       btn_text: "conatct us",
     },
     {
@@ -51,8 +52,17 @@ const about_content: DataType = {
       color_bg: "theme-bg2",
       bg_img: bg_icon_2,
       img: icon_2,
-      title: "Medical Care",
-      sm_des: "Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give complete",
+      title: "Top Doctors",
+      sm_des: "Our doctors are renowned for their experience, empathy, and dedication — combining modern medicine with a human touch.",
+      btn_text: "read more",
+    },
+    {
+      id: 1,
+      color_bg: "theme-bg",
+      bg_img: bg_icon_1,
+      img: icon_1,
+      title: "24 Hours Service",
+      sm_des: "We are ready to serve you 24/7 with immediate emergency care services. Your health is our top priority, anytime, anywhere.",
       btn_text: "read more",
     },
     {
@@ -62,10 +72,11 @@ const about_content: DataType = {
       img: icon_3,
       title: "Opening Hours",
       day_1: "Mon - Friday",
-      day_2: "Mon - Friday",
-      time_1: "08:00 am - 09:00 pm",
-      time_2: "05:00 pm - 08:00 pm",
+      day_2: "Saturday",
       day_3: "Sunday",
+      time_1: "08:00 am - 17:00 pm",
+      time_2: "09:30 pm - 17:30 pm",
+      time_3: "09:30 pm - 15:00 pm",
       closed: "Closed",
 
     },
@@ -89,21 +100,22 @@ const AboutAreaHomeFive = () => {
           </div>
           <div className="row g-0">
             {about_data.map((item, i) =>
-              <div key={i} className="col-lg-4 mb-30">
+              <div key={i} className="col-lg-3 mb-30">
                 <div className={`h5services-wrapper ${item.color_bg}`}>
                   <i className="h5sicon-bg"><Image src={item.bg_img} alt="icon" /></i>
                   <div className="h5services-content">
                     <i className="h5services-icon"><Image src={item.img} alt="theme-pure" /></i>
                     <h3 className="white-color h5services-title">{item.title}</h3>
-                    {i === 2 ?
+                    {i === 3 ?
                       <>
                         <ul className="h5services-events">
                           <li className="white-color f-500"> {item.day_1} <span>{item.time_1}</span></li>
                           <li className="white-color f-500"> {item.day_2} <span>{item.time_2}</span></li>
+                          <li className="white-color f-500"> {item.day_3} <span>{item.time_3}</span></li>
                         </ul>
-                        <ul className="h5services-events h5sclose-days">
+                        {/* <ul className="h5services-events h5sclose-days">
                           <li className="white-color f-500"> {item.day_3} <span>{item.closed}</span></li>
-                        </ul>
+                        </ul> */}
                       </>
                       :
                       <>

@@ -16,6 +16,7 @@ import CounterHomeFive from './CounterHomeFive';
 import LatestNewsAreaHomeFour from '../home-4/LatestNewsAreaHomeFour';
 import BrandAreaHomeFour from '../home-4/BrandAreaHomeFour';
 import FooterThree from '@/layout/footers/FooterThree';
+import AboutVideoArea from '@/components/about/AboutVideoArea';
 
 const HomeFive = () => {
   return (
@@ -24,18 +25,19 @@ const HomeFive = () => {
       <main>
         <HeroAreaHomeFour style={true} />
         <AboutAreaHomeFive />
+        <AboutVideoArea />
         <ServicesAreaHomeFour style={true} />
         <TeamAreaHomeFour />
-        <RoutineAreaHomeFive />
+        {/* <RoutineAreaHomeFive /> */}
         <PhotoGalleryHomeFive />
         <AppoinmentAreaHomeFour />
         <FactAreaHomeFour />
-        <MedicalTabHomeFive />
-        <HowItWorksHomeFour />
-        <TestimonialsHomeFour />
-        <CounterHomeFive />
+        {/* <MedicalTabHomeFive /> */}
+        {/* <HowItWorksHomeFour /> */}
+        {/* <TestimonialsHomeFour /> */}
+        {/* <CounterHomeFive /> */}
         <LatestNewsAreaHomeFour />
-        <BrandAreaHomeFour />
+        {/* <BrandAreaHomeFour /> */}
       </main>
       <FooterThree />
     </>

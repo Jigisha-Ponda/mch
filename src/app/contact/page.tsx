@@ -4,7 +4,7 @@ import React from 'react';
 
 
 export const metadata = {
-  title: "Contact MediDove React Next js Tempalte",
+  title: "Contact",
 };
 
 
