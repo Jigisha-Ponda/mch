@@ -1,5 +1,4 @@
 
-import HeaderOne from '@/layout/headers/HeaderOne';
 import React from 'react';
 import Breadcrumb from '../common/breadcrumb/Breadcrumb';
 import AboutVideoArea from './AboutVideoArea';
