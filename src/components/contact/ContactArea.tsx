@@ -24,7 +24,7 @@ const contact_data: DataType[] = [
   },
   {
     id: 3,
-    icon: "fas fa-phone",
+    icon: "fas fa-phone-alt",
     title: "Call Here",
     info_1: "9262966541",
     info_2: "06217960945",

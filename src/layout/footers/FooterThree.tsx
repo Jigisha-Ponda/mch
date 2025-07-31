@@ -13,7 +13,8 @@ import footer_logo_three from "@/assets/img/mch/logo.webp";
 interface DataType {
   sm_des: string;
   email: string;
-  phone: string;
+  phone1: string;
+  phone2: string;
   address: string;
   link_data: {
     title: string;
@@ -27,32 +28,32 @@ interface DataType {
     img: StaticImageData;
     title: string;
     time: string;
-
   }[];
+  office_open_title: string;
+  office_open_day_1: string;
+  office_open_time_1: string;
+  office_open_day_2: string;
+  office_open_time_2: string;
+  office_open_day_3: string;
+  office_open_time_3: string;
 }
 
 const footer_content: DataType = {
   sm_des: " At MCH, we are committed to delivering world-class healthcare with advanced technology and compassionate care. Your well-being is our mission.",
   email: "care@mch.org.in",
-  phone:"9262966541 || 06217960945",
+  phone1: "9262966541",
+  phone2: "06217960945",
   address: "At- Chandani Chowk, Brijbihari Lane, Krishna Toli, Muzaffarpur-842003",
 
   link_data: [
     {
-      title: "Departments",
+      title: "Quick Links",
       links: [
-        { title: "Obstetrics and gynaecology", link: "#" },
-        { title: "Departments", link: "#" },
-        { title: "Family Medicine", link: "#" },
-        { title: "Our Doctors", link: "#" },
-        { title: "Women's Health", link: "#" },
-        { title: "News", link: "#" },
-        { title: "Optician", link: "#" },
-        // { title: "Shop", link: "#" },
-        { title: "Pediatrics", link: "#" },
-        { title: "Contact Us", link: "#" },
-        { title: "Dermatology", link: "#" },
-        { title: "Book an Appointment", link: "#" },
+        { title: "Home", link: "/" },
+        { title: "Book an Appointment", link: "/appoinment" },
+        { title: "Gallery", link: "/gallery" },
+        { title: "Events", link: "/events" },
+        { title: "Contact", link: "/contact" },
       ]
     }
   ],
@@ -75,9 +76,16 @@ const footer_content: DataType = {
       title: "Consectetur ipsum dolor sit am et, lorem .",
       time: "14 August 2023"
     },
-  ]
+  ],
+  office_open_title: "Opening Hours",
+  office_open_day_1: "Monday - Friday",
+  office_open_day_2: "Saturday",
+  office_open_day_3: "Sunday",
+  office_open_time_1: "08:00 am - 17:00 pm",
+  office_open_time_2: "09:30 pm - 17:30 pm",
+  office_open_time_3: "09:30 pm - 15:00 pm",
 }
-const { sm_des, email, phone, address, link_data, footer_blog_data } = footer_content
+const { sm_des, email, phone1, phone2, address, link_data, footer_blog_data, office_open_title, office_open_day_1, office_open_time_1,office_open_day_2, office_open_time_2,office_open_day_3, office_open_time_3 } = footer_content
 
 
 const FooterThree = () => {
@@ -86,8 +94,8 @@ const FooterThree = () => {
       <footer>
         <div className="footer-top primary-bg footer-map pos-rel pt-120 pb-80">
           <div className="container">
-            <div className="row align-items-center">
-              <div className="col-xl-4 col-lg-6 col-md-6">
+            <div className="row justify-content-between">
+              <div className="col-xl-4 col-lg-6">
                 <div className="footer-contact-info footer-contact-info-3 mb-40">
                   <div className="footer-logo mb-35">
                     <Link href="/"><Image src={footer_logo_three} alt="theme-pure" /></Link>
@@ -97,30 +105,33 @@ const FooterThree = () => {
                   </div>
                   <div className="footer-emailing">
                     <ul>
-                      <li><i className="far fa-envelope"></i>{email}</li>
-                      <li><i className="far fa-envelope"></i>{phone}</li>
+                      <li><i className="far fa-envelope"></i><a href={`mailto:${email}`}>{email}</a></li>
+                      <li><i className="far fa-phone-alt"></i><a href={`tel:${phone1}`}>{phone1}</a> || <a href={`tel:${phone2}`}>{phone2}</a></li>
                       <li><i className="far fa-flag"></i>{address}</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              {link_data.map((link, link_i) =>
-                <div key={link_i} className="col-xl-4 col-lg-6 col-md-6">
-                  <div className="footer-widget mb-40">
-                    <div className="footer-title">
-                      <h3>{link.title}</h3>
+              <div className="col-xl-6 col-lg-6">
+                <div className="row justify-content-between">
+                  {link_data.map((item, i) =>
+                    <div key={i} className="col-xl-5 col-lg-6 col-md-6">
+                      <div className="footer-widget h4footer-widget pt-0 mb-40">
+                        <div className="footer-title">
+                          <h3 className="mb-4">{item.title}</h3>
+                        </div>
+                        <div className="footer-menu h4footer-menu d-block">
+                          <ul>
+                            {item.links?.map((link, index) =>
+                              <li key={index}><Link href={link.link}>{link.title}</Link></li>
+                            )}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div className="footer-menu footer-menu-2">
-                      <ul>
-                        {link.links.map((link_item, index) =>
-                          <li key={index}><Link href={link_item.link}>{link_item.title}</Link></li>
-                        )}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div className="col-xl-4 col-lg-6 col-md-6">
+
+                  )}
+                  {/* <div className="col-xl-4 col-lg-6 col-md-6">
                 <div className="footer-widget mb-40">
                   <div className="footer-title">
                     <h3>News Feeds</h3>
@@ -139,6 +150,44 @@ const FooterThree = () => {
                         </div>
                       </div>
                     )}
+                  </div>
+                </div>
+              </div> */}
+                  <div className="col-xl-6 col-lg-6 col-md-6">
+                    <div className="footer-widget h4footer-widget pt-0 mb-40">
+                      <div className="footer-title">
+                        <h3 className="mb-4">{office_open_title}</h3>
+                      </div>
+                      <div className="h4events-list mb-30">
+                        <ul>
+                          <li>
+                            <i className="fal fa-clock"></i><span>{office_open_day_1} <span>{office_open_time_1}</span></span>
+                          </li>
+                          <li>
+                            <i className="fal fa-clock"></i><span>{office_open_day_2} <span>{office_open_time_2}</span></span>
+                          </li>
+                          <li>
+                            <i className="fal fa-clock"></i><span>{office_open_day_3} <span>{office_open_time_3}</span></span>
+                          </li>
+                          {/* <li>
+                            <i className="fal fa-times-square"></i ><span className="close-days">Satarday Closed</span>
+                          </li> */}
+                        </ul>
+                      </div>
+                      <div className="h4footer-social">
+                        <ul className="list-inline">
+                          <li>
+                            <a href="#"><i className="fab fa-facebook-f"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i className="fab fa-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i className="fab fa-google"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -2002,6 +2002,10 @@ li.price-del i {
 	padding-right: 20px;
 }
 
+.footer-contact-content p{
+	font-size:16px;
+}
+
 .footer-emailing ul li {
 	font-size: 16px!important;
 	color: #647589;
@@ -2009,6 +2013,10 @@ li.price-del i {
 }
 
 .footer-contact-info-3 .footer-emailing ul li {
+	color: #91a1b4;
+}
+
+.footer-contact-info-3 .footer-emailing ul li a{
 	color: #91a1b4;
 }
 
@@ -2053,6 +2061,7 @@ li.price-del i {
 .footer-menu ul li a {
 	color: #899dab;
 	font-weight: 500;
+	font-size: 16px;
 }
 
 .footer-menu ul li a:hover {
@@ -6105,7 +6114,7 @@ p.checkout-coupon input[type="text"] {
 	padding-left: 35px;
 	overflow: hidden;
 	display: inline-block;
-	font-size: 18px;
+	font-size: 16px!important;
 	font-weight: 500;
 	color: #91a1b4;
 }

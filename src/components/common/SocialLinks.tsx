@@ -116,20 +116,40 @@ const team_social_data: TeamSocialLinksDataType[] = [
     icon: "fab fa-twitter",
   },
   {
-    id: 3,
-    link: "http://behance.com",
-    icon: "fab fa-behance",
+    id: 6,
+    link: "https://youtube.com",
+    icon: "fab fa-youtube",
+  },
+  {
+    id: 7,
+    link: "https://plus.google.com",
+    icon: "fab fa-google-plus-g",
+  },
+  // {
+  //   id: 3,
+  //   link: "http://behance.com",
+  //   icon: "fab fa-behance",
+  // },
+  {
+    id: 5,
+    link: "http://linkedin.com",
+    icon: "fab fa-linkedin",
+  },
+  {
+    id: 8,
+    link: "https://instagram.com",
+    icon: "fab fa-instagram",
   },
   {
     id: 4,
     link: "http://pinterest.com",
     icon: "fab fa-pinterest",
   },
-  {
-    id: 5,
-    link: "http://linkedin.com",
-    icon: "fab fa-linkedin",
-  },
+  // {
+  //   id: 5,
+  //   link: "https://linkedin.com",
+  //   icon: "fab fa-linkedin-in",
+  // },
 ]
 
 export const TeamSocialLinks = () => {

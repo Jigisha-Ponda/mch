@@ -31,7 +31,7 @@ const HeaderFour = () => {
               <div className="col-xl-6 col-lg-6">
                 <div className="header-info header-info4 p-0">
                   <span><i className="far fa-envelope-open"></i>{email}</span>
-                  <span><i className="fal fa-phone"></i>{phone}</span>
+                  <span><i className="fal fa-phone-alt"></i>{phone}</span>
                   <span><i className="fal fa-clock"></i>{open_time}</span>
                 </div>
               </div>
