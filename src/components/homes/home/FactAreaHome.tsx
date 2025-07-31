@@ -15,7 +15,7 @@ const {sub_title, title}  = fact_content
 const FactAreaHome = () => {
   return (
     <>
-      <section className="fact-area fact-map green-bg pos-rel pt-115 pb-120">
+      <section className="fact-area fact-map blue-bg pos-rel pt-115 pb-120">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-xl-10 offset-xl-1">

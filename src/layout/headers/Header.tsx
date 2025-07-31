@@ -13,7 +13,7 @@ const header_4_content = {
   email: "care@mch.org.in",
   phone1: "9262966541",
   phone2: "06217960945",
-  open_time: "Sun - Thuseday, 09:00 am - 08:00 pm",
+  open_time: "Mon - Friday, 08:00 am - 17:00 pm",
   help: "Needs Help?",
   setting: "Setting & Privacy",
   media: "Media",
@@ -59,14 +59,14 @@ const Header = () => {
         <div className={`header-menu-area menu-area4 pl-55 pr-55 ${sticky ? "sticky_menu" : ""} `}>
           <div className="container-fluid">
             <div className="row align-items-center">
-              <div className="col-xl-4 col-lg-9 col-md-9 d-flex justify-content-between align-items-center navbar__wrapper">
+              <div className="col-xl-4 col-lg-9 col-10 d-flex justify-content-between align-items-center navbar__wrapper">
                 <div className="logo pos-rel">
                   <Link href="/">
                     <Image src={HeaderLogo}  alt="MediDove" />
                   </Link>
                 </div>
               </div>
-              <div className="col-xl-4 col-lg-3 col-md-3 align-items-center justify-content-center">
+              <div className="col-xl-4 col-lg-3 col-2 align-items-center justify-content-center">
                 <div className="header__menu header__menu4 d-none d-xl-flex justify-content-center">
                   <nav id="mobile-menu">
                     <NavMenu home_4={true} />  

@@ -29,14 +29,14 @@ const Home = () => {
         <ServicesAreaHome style={true} />
         <TeamAreaHome />
         {/* <RoutineAreaHome /> */}
-        <PhotoGalleryHome />
-        <AppoinmentAreaHome />
+        {/* <AppoinmentAreaHome /> */}
         <FactAreaHome/>
+        <PhotoGalleryHome />
         {/* <MedicalTabHome /> */}
         {/* <HowItWorksHome /> */}
         {/* <TestimonialsHome /> */}
         {/* <CounterHome /> */}
-        <LatestNewsAreaHome />
+        {/* <LatestNewsAreaHome /> */}
         {/* <BrandAreaHome /> */}
       </main>
       <Footer/>
