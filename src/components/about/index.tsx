@@ -7,14 +7,15 @@ import AboutCounterArea from './AboutCounterArea';
 import AboutAppoinment from './AboutAppoinment';
 import AboutTestimonialsArea from './AboutTestimonialsArea';
 import AboutAnalysisArea from './AboutAnalysisArea';
-import FooterThree from '@/layout/footers/FooterThree';
 import TeamAreaHomeOne from '../homes/home/TeamAreaHomeOne';
 import FactAreaHomeOne from '../homes/home/FactAreaHomeOne';
+import Footer from '@/layout/footers/Footer';
+import Header from '@/layout/headers/Header';
 
 const About = () => {
   return (
     <>
-      <HeaderOne />
+      <Header />
       <main>
         <Breadcrumb sub_title='We are here for your care.' title='About Us' page='About Us' />
         <AboutVideoArea />
@@ -25,7 +26,7 @@ const About = () => {
         <AboutTestimonialsArea />
         <AboutAnalysisArea />
       </main>
-      <FooterThree />
+      <Footer/>
     </>
   );
 };

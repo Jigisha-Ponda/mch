@@ -1,13 +1,13 @@
-import HeaderOne from "@/layout/headers/HeaderOne";
 import React from "react";
 import Breadcrumb from "../common/breadcrumb/Breadcrumb";
-import FooterThree from "@/layout/footers/FooterThree";
 import Link from "next/link";
+import Footer from "@/layout/footers/Footer";
+import Header from "@/layout/headers/Header";
 
 const ErrorPage = () => {
   return (
     <>
-      <HeaderOne />
+      <Header />
       <main>
         <Breadcrumb sub_title="We are here for your care." title="404 || Error" page="404" />
         <div className="pt-120 pb-120">
@@ -32,7 +32,7 @@ const ErrorPage = () => {
           </div>
         </div>
       </main>
-      <FooterThree />
+      <Footer />
     </>
   );
 };

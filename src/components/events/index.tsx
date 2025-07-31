@@ -1,18 +1,18 @@
 import React from 'react';
 import Breadcrumb from '../common/breadcrumb/Breadcrumb';
-import FooterThree from "@/layout/footers/FooterThree";
-import HeaderFour from '@/layout/headers/HeaderFour';
+import Footer from '@/layout/footers/Footer';
+import Header from '@/layout/headers/Header';
 import LatestNewsAreaHomeOne from '../homes/home/LatestNewsAreaHomeOne';
 
 const Events = () => {
   return (
     <>
-      <HeaderFour />
+      <Header />
       <main>
         <Breadcrumb sub_title='We are here for your care.' title='Events' page='Events' />
         <LatestNewsAreaHomeOne style={true} />
       </main>
-      <FooterThree />
+      <Footer />
     </>
   );
 };

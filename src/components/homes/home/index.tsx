@@ -1,31 +1,47 @@
-import CtaAreaHomeOne from "./CtaAreaHomeOne";
-import TeamAreaHomeOne from "./TeamAreaHomeOne";
-import FactAreaHomeOne from "./FactAreaHomeOne";
-import AboutAreaHomeOne from "./AboutAreaHomeOne";
-import ServicesAreaHome from "./ServicesAreaHome";
-import HeroSliderHomeOne from "./HeroSliderHomeOne";
-import PricingAreaHomeOne from "./PricingAreaHomeOne";
-import LatestNewsAreaHomeOne from "./LatestNewsAreaHomeOne";
-import FooterOne from "@/layout/footers/FooterOne";
-import HeaderOne from "@/layout/headers/HeaderOne";
 
-const HomeOne = () => {
+import React from 'react';
+import AboutVideoArea from '@/components/about/AboutVideoArea';
+import Header from '@/layout/headers/Header';
+import HeroAreaHome from './HeroAreaHome';
+import AboutAreaHome from './AboutAreaHome';
+import ServicesAreaHome from './ServicesAreaHome';
+import TeamAreaHome from './TeamAreaHome';
+import RoutineAreaHome from './RoutineAreaHome';
+import PhotoGalleryHome from './PhotoGalleryHome';
+import AppoinmentAreaHome from './AppoinmentAreaHome';
+import FactAreaHome from './FactAreaHome';
+import MedicalTabHome from './MedicalTabHome';
+import HowItWorksHome from './HowItWorksHome';
+import TestimonialsHome from './TestimonialsHome';
+import CounterHome from './CounterHome';
+import LatestNewsAreaHome from './LatestNewsAreaHome';
+import BrandAreaHome from './BrandAreaHome';
+import Footer from '@/layout/footers/Footer';
+
+const Home = () => {
   return (
     <>
-      <HeaderOne />
+      <Header />
       <main>
-        <HeroSliderHomeOne />
-        <AboutAreaHomeOne />
-        <ServicesAreaHome />
-        <TeamAreaHomeOne />
-        <FactAreaHomeOne />
-        <PricingAreaHomeOne />
-        <CtaAreaHomeOne />
-        <LatestNewsAreaHomeOne  style={false} />
+        <HeroAreaHome style={true} />
+        <AboutAreaHome />
+        <AboutVideoArea />
+        <ServicesAreaHome style={true} />
+        <TeamAreaHome />
+        {/* <RoutineAreaHome /> */}
+        <PhotoGalleryHome />
+        <AppoinmentAreaHome />
+        <FactAreaHome/>
+        {/* <MedicalTabHome /> */}
+        {/* <HowItWorksHome /> */}
+        {/* <TestimonialsHome /> */}
+        <CounterHome />
+        <LatestNewsAreaHome />
+        <BrandAreaHome />
       </main>
-      <FooterOne />
+      <Footer/>
     </>
   );
 };
 
-export default HomeOne;
+export default Home;

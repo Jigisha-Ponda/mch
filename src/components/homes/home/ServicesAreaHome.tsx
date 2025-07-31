@@ -1,106 +1,123 @@
-
-import Image, { StaticImageData } from "next/image";
+'use client'
+import servcies_data from '@/data/ServiceData';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useRef } from 'react';
+import Slider from 'react-slick';
+import service_overlay from "@/assets/img/home4/services/services__overlay__bg.png";
 import back_icon from "@/assets/img/section/section-back-icon.png";
 import title_line from "@/assets/img/shape/section-title-line.png";
 
-import service_icon_1 from "@/assets/img/services/service1.png";
-import service_icon_2 from "@/assets/img/services/service2.png";
-import service_icon_3 from "@/assets/img/services/service3.png";
-import service_icon_4 from "@/assets/img/services/service4.png";
-import service_icon_5 from "@/assets/img/services/service5.png";
-import service_icon_6 from "@/assets/img/services/service6.png";
-import Link from "next/link";
+import icon_home_5 from "@/assets/img/icon/h5manage__icon.png";
 
-interface service_content_type {
-  sub_title: string;
-  title: string;
-  service_data: {
-      id: number;
-      img: StaticImageData;
-      title: string;
-      sm_des: string;
-  }[];
-}
-const service_content: service_content_type = {
-  sub_title: "Departments",
-  title: "Managed Your Heathcare Services",
-  service_data: [
+const setting = {
+  dots: true,
+  arrows: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
     {
-      id: 1,
-      img: service_icon_1,
-      title: "Body Surgery",
-      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: false,
+      }
     },
     {
-      id: 2,
-      img: service_icon_2,
-      title: "Dental Care",
-      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
     },
     {
-      id: 3,
-      img: service_icon_3,
-      title: "Eye Care",
-      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-    },
-    {
-      id: 4,
-      img: service_icon_4,
-      title: "Blood Cancer",
-      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-    },
-    {
-      id: 5,
-      img: service_icon_5,
-      title: "Neurology Sargery",
-      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-    },
-    {
-      id: 6,
-      img: service_icon_6,
-      title: "Allergic Issue",
-      sm_des: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-    },
-  ],
-}
-const { sub_title, title, service_data } = service_content
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      }
 
-const ServicesAreaHome = () => {
+    }
+
+  ]
+}
+
+const ServicesAreaHome = ({ style }: any) => {
+  const sliderRef = useRef<Slider | null>(null);
+  const handlePrev = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
+  const handleNext = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  }
   return (
     <>
-      <section className="servcies-area gray-bg pt-115 pb-90">
+      <section className={`services-area ${style ? "gray-bg" : "services-border"} pos-rel pt-185 pb-160`}>
+        {style ? <></> :
+          <span className="h4services-bg">
+            <Image src={service_overlay} alt="theme-pure" />
+          </span>
+        }
         <div className="container">
           <div className="row">
             <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
               <div className="section-title text-center pos-rel mb-75">
                 <div className="section-icon">
-                  <Image className="section-back-icon" src={back_icon} alt="theme-pure" />
+                  <Image className="section-back-icon" src={back_icon} alt="" />
                 </div>
                 <div className="section-text pos-rel">
-                  <h5>{sub_title}</h5>
-                  <h1>{title}</h1>
+                  <h5>Departments</h5>
+                  <h1>Managed Your Healthcare Services</h1>
                 </div>
                 <div className="section-line pos-rel">
-                  <Image src={title_line} alt="theme-pure" />
+                  <Image src={title_line} alt="" />
                 </div>
               </div>
             </div>
           </div>
-          <div className="row">
-            {service_data.map((item, i) =>
-              <div key={i} className="col-xl-4 col-lg-6 col-md-6">
-                <div className="service-box text-center mb-30">
-                  <div className="service-thumb">
-                    <Image src={item.img} alt="theme-pure" />
-                  </div>
-                  <div className="service-content">
-                    <h3><Link href="#">{item.title}</Link></h3>
-                    <p>{item.sm_des}</p>
-                    <Link className="service-link" href="/service-details">Read More</Link>
+
+          <div className={`row ${style ? "h4service-active h5service-active" : "h4service-active"} slick-initialized slick-slider slick-dotted`}>
+            <button type="button" className="slick-prev slick-arrow d-none d-md-block" onClick={handlePrev}>
+              <i className="fal fa-angle-left"></i>
+            </button>
+            <button type="button" className="slick-next slick-arrow d-none d-md-block" onClick={handleNext}>
+              <i className="fal fa-angle-right"></i>
+            </button>
+            <Slider {...setting} ref={sliderRef}>
+              {servcies_data.slice(4, 8).map((item, i) =>
+                <div key={i} className="h4service-item">
+                  <div className="h4service-box white-bg mb-30">
+                    <div className="service-thumb pos-rel mb-0">
+                      <Image src={item.img} alt="theme-pure" />
+                      <Link className="h4services-tag green-bg white-color text-uppercase f-700" href="#" >{item.sub_title}</Link>
+                    </div>
+                    <div className={`service-content ${style ? "h4services-content h6services-content" : "h4services-content"}`}>
+                      <h3><a href="#">{item.title}</a></h3>
+                      <p className="mb-20"> {item.sm_des} </p>
+                      {style ?
+                        <div className="h5services-bottom">
+                          <span><i><Image src={icon_home_5} alt="" /></i>
+                            <span className="f-500">07 Specialist Doctors</span></span>
+                        </div>
+                        :
+                        <Link className="service-link" href="/service-details">
+                          Read More <i className="fal fa-long-arrow-right"></i>
+                        </Link>
+                      }
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
+            </Slider>
           </div>
         </div>
       </section>

@@ -1,18 +1,18 @@
 import Breadcrumb from '@/components/common/breadcrumb/Breadcrumb';
-import HeaderOne from '@/layout/headers/HeaderOne';
 import React from 'react';
 import ShopProducts from './ShopProducts';
-import FooterThree from '@/layout/footers/FooterThree';
+import Footer from '@/layout/footers/Footer';
+import Header from '@/layout/headers/Header';
 
 const Shop = () => {
   return (
     <>
-      <HeaderOne />
+      <Header />
       <main>
         <Breadcrumb sub_title='We are here for your care.' title='Shop Page' page='Shop' />
         <ShopProducts />
       </main>
-      <FooterThree />
+      <Footer />
     </>
   );
 };

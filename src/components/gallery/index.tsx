@@ -1,18 +1,18 @@
 import React from 'react';
 import Breadcrumb from '../common/breadcrumb/Breadcrumb';
-import FooterThree from "@/layout/footers/FooterThree";
-import HeaderFour from '@/layout/headers/HeaderFour';
-import PhotoGalleryHomeFive from '../homes/home-5/PhotoGalleryHomeFive';
+import PhotoGalleryHome from '../homes/home/PhotoGalleryHome';
+import Footer from '@/layout/footers/Footer';
+import Header from '@/layout/headers/Header';
 
 const Gallery = () => {
   return (
     <>
-      <HeaderFour />
+      <Header />
       <main>
         <Breadcrumb sub_title='We are here for your care.' title='Gallery' page='Gallery' />
-        <PhotoGalleryHomeFive/>
+        <PhotoGalleryHome/>
       </main>
-      <FooterThree />
+      <Footer />
     </>
   );
 };
