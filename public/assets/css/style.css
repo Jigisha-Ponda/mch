@@ -3979,6 +3979,7 @@ ul.cat li a:hover {
 .contact {
 	border: 1px solid #eaedff;
 	padding: 40px 10px;
+	min-height: 360px;
 }
 
 .contact-area {

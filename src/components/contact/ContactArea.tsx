@@ -38,7 +38,7 @@ const ContactArea = () => {
         <div className="container">
           <div className="row">
             {contact_data.map((item, i) =>
-              <div key={i} className="col-xl-4 col-lg-4 col-md-4">
+              <div key={i} className="col-xl-4 col-lg-4 col-md-6">
                 <div className="contact text-center mb-30">
                   <i className={`${item.icon}`}></i>
                   <h3>{item.title}</h3>
