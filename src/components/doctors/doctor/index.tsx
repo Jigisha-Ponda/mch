@@ -4,7 +4,6 @@ import FactAreaHome from '@/components/homes/home/FactAreaHome';
 import TeamAreaHome from '@/components/homes/home/TeamAreaHome';
 import Footer from '@/layout/footers/Footer';
 import Header from '@/layout/headers/Header';
-import HeaderOne from '@/layout/headers/HeaderOne';
 import React from 'react';
 
 const Doctor = () => {
