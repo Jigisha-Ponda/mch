@@ -23,11 +23,12 @@ interface DataType {
     title: string;
     sm_des?: string;
     btn_text?: string;
+    btn_link?: string;
     day_1?: string;
     day_2?: string;
     time_1?: string;
     time_2?: string;
-    time_3?:string;
+    time_3?: string;
     day_3?: string;
     closed?: string;
   })[];
@@ -46,6 +47,7 @@ const about_content: DataType = {
       title: "Clinic News",
       sm_des: "We strive to provide affordable, high-quality healthcare to everyone, ensuring compassionate and personalized treatment for every patient.",
       btn_text: "conatct us",
+      btn_link: "/contact",
     },
     {
       id: 1,
@@ -55,6 +57,7 @@ const about_content: DataType = {
       title: "Top Doctors",
       sm_des: "Our doctors are renowned for their experience, empathy, and dedication — combining modern medicine with a human touch.",
       btn_text: "read more",
+      btn_link: "/gallery",
     },
     {
       id: 1,
@@ -64,6 +67,7 @@ const about_content: DataType = {
       title: "24 Hours Service",
       sm_des: "We are ready to serve you 24/7 with immediate emergency care services. Your health is our top priority, anytime, anywhere.",
       btn_text: "read more",
+      btn_link: "/appointment",
     },
     {
       id: 1,
@@ -120,7 +124,7 @@ const AboutAreaHomeFive = () => {
                       :
                       <>
                         <p>{item.sm_des}</p>
-                        <Link href="#" className="green-color text-uppercase f-500"><span className="plus">
+                        <Link href={item.btn_link ?? "#"} className="green-color text-uppercase f-500"><span className="plus">
                           +</span><span className="link">{item.btn_text}</span>
                         </Link>
                       </>

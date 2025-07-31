@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
+        <link rel="icon" href="favicon.ico" sizes="any" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700|Rubik:400,500,700"
