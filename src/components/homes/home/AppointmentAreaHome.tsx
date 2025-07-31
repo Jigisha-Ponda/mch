@@ -1,7 +1,7 @@
 
 import AppoinmentSubmitHomeFour from '@/components/forms/AppoinmentSubmitHomeFour';  
 
-const AppoinmentAreaHome = () => {
+const AppointmentAreaHome = () => {
   return (
     <>
       <section className="appoinment pos-rel">
@@ -26,4 +26,4 @@ const AppoinmentAreaHome = () => {
   );
 };
 
-export default AppoinmentAreaHome;
+export default AppointmentAreaHome;

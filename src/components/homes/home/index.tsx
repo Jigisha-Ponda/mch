@@ -8,7 +8,7 @@ import ServicesAreaHome from './ServicesAreaHome';
 import TeamAreaHome from './TeamAreaHome';
 import RoutineAreaHome from './RoutineAreaHome';
 import PhotoGalleryHome from './PhotoGalleryHome';
-import AppoinmentAreaHome from './AppoinmentAreaHome';
+import AppoinmentAreaHome from './AppointmentAreaHome';
 import FactAreaHome from './FactAreaHome';
 import MedicalTabHome from './MedicalTabHome';
 import HowItWorksHome from './HowItWorksHome';
@@ -35,7 +35,7 @@ const Home = () => {
         {/* <MedicalTabHome /> */}
         {/* <HowItWorksHome /> */}
         {/* <TestimonialsHome /> */}
-        <CounterHome />
+        {/* <CounterHome /> */}
         <LatestNewsAreaHome />
         <BrandAreaHome />
       </main>

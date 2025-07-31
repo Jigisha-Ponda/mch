@@ -50,7 +50,7 @@ const footer_content: DataType = {
       title: "Quick Links",
       links: [
         { title: "Home", link: "/" },
-        { title: "Book an Appointment", link: "/appoinment" },
+        { title: "Book an Appointment", link: "/appointment" },
         { title: "Gallery", link: "/gallery" },
         { title: "Events", link: "/events" },
         { title: "Contact", link: "/contact" },

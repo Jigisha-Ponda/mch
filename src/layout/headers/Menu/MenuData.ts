@@ -14,7 +14,7 @@ const MenuData: MenuDataType[] = [
   {
     id: 1,
     title: "Home",
-    link: "/home-5",
+    link: "/home",
     has_dropdown: true, 
     sub_menus: [
       { link: "/",                            title: "Home style 1",},
@@ -140,7 +140,7 @@ const MenuData: MenuDataType[] = [
   //   has_dropdown: true, 
   //   sub_menus: [
   //     { link: "/about",                        title: "About",},     
-  //     { link: "/appoinment",                   title: "Appoinment",},     
+  //     { link: "/appointment",                   title: "Appoinment",},     
   //     { link: "/portfolio-2",              title: "Portfolio 2 column",},     
   //     { link: "/portfolio",                    title: "Portfolio 3 column",},     
   //     { link: "/portfolio-slider",             title: "Portfolio Slider",},     
