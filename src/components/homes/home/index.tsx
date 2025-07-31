@@ -37,7 +37,7 @@ const Home = () => {
         {/* <TestimonialsHome /> */}
         {/* <CounterHome /> */}
         <LatestNewsAreaHome />
-        <BrandAreaHome />
+        {/* <BrandAreaHome /> */}
       </main>
       <Footer/>
     </>
