@@ -58,14 +58,16 @@ const Header = () => {
 
         <div className={`header-menu-area menu-area4 pl-55 pr-55 ${sticky ? "sticky_menu" : ""} `}>
           <div className="container-fluid">
-            <div className="row">
-              <div className="col-xl-8 col-lg-12 col-md-12 d-flex justify-content-between align-items-center navbar__wrapper">
+            <div className="row align-items-center">
+              <div className="col-xl-4 col-lg-9 col-md-9 d-flex justify-content-between align-items-center navbar__wrapper">
                 <div className="logo pos-rel">
                   <Link href="/">
                     <Image src={HeaderLogo}  alt="MediDove" />
                   </Link>
                 </div>
-                <div className="header__menu header__menu4 pl-60">
+              </div>
+              <div className="col-xl-4 col-lg-3 col-md-3 align-items-center justify-content-center">
+                <div className="header__menu header__menu4 d-none d-xl-flex justify-content-center">
                   <nav id="mobile-menu">
                     <NavMenu home_4={true} />  
                   </nav>

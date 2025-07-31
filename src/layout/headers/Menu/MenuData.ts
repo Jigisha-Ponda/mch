@@ -50,19 +50,19 @@ const MenuData: MenuDataType[] = [
       { link: "/home-5",                      title: "Home style 5", },
     ],
   },
-  {
-    id: 4,
-    title: "Events",
-    link: "/events",
-    has_dropdown: true, 
-    sub_menus: [
-      { link: "/",                            title: "Home style 1",},
-      { link: "/home-2",                      title: "Home style 2", },
-      { link: "/home-3",                      title: "Home style 3", },
-      { link: "/home-4",                      title: "Home style 4",   },
-      { link: "/home-5",                      title: "Home style 5", },
-    ],
-  },
+  // {
+  //   id: 4,
+  //   title: "Events",
+  //   link: "/events",
+  //   has_dropdown: true, 
+  //   sub_menus: [
+  //     { link: "/",                            title: "Home style 1",},
+  //     { link: "/home-2",                      title: "Home style 2", },
+  //     { link: "/home-3",                      title: "Home style 3", },
+  //     { link: "/home-4",                      title: "Home style 4",   },
+  //     { link: "/home-5",                      title: "Home style 5", },
+  //   ],
+  // },
   {
     id: 5,
     title: "Contact",
