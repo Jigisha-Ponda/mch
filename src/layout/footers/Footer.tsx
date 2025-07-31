@@ -52,7 +52,7 @@ const footer_content: DataType = {
         { title: "Home", link: "/" },
         { title: "Book an Appointment", link: "/appointment" },
         { title: "Gallery", link: "/gallery" },
-        { title: "Events", link: "/events" },
+        // { title: "Events", link: "/events" },
         { title: "Contact", link: "/contact" },
       ]
     }
