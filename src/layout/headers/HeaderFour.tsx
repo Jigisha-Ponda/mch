@@ -11,13 +11,14 @@ import MobileMenus from './Menu/MobileMenus';
 
 const header_4_content = { 
   email: "care@mch.org.in",
-  phone: "9262966541 || 06217960945",
+  phone1: "9262966541",
+  phone2: "06217960945",
   open_time: "Sun - Thuseday, 09:00 am - 08:00 pm",
   help: "Needs Help?",
   setting: "Setting & Privacy",
   media: "Media",
 }
-const {email, phone, open_time, help, setting,media} = header_4_content
+const {email, phone1, phone2, open_time, help, setting,media} = header_4_content
 
 const HeaderFour = () => {
   const { sticky } = UseSticky() 
@@ -25,13 +26,13 @@ const HeaderFour = () => {
   return (
     <>
       <header>
-        <div className="top-bar4 white-bg top-border d-none d-md-block pl-55 pr-55 pt-25 pb-25">
+        <div className="top-bar4 white-bg top-border d-none d-md-block pl-55 pr-55 pt-10 pb-10">
           <div className="container-fluid">
             <div className="row d-flex align-items-center">
               <div className="col-xl-6 col-lg-6">
                 <div className="header-info header-info4 p-0">
-                  <span><i className="far fa-envelope-open"></i>{email}</span>
-                  <span><i className="fal fa-phone-alt"></i>{phone}</span>
+                  <span><i className="far fa-envelope-open"></i><a href={`mailto:${email}`}>{email}</a></span>
+                  <span><i className="fal fa-phone-alt"></i><a href={`tel:${phone1}`}>{phone1}</a> || <a href={`tel:${phone2}`}>{phone2}</a></span>
                   <span><i className="fal fa-clock"></i>{open_time}</span>
                 </div>
               </div>

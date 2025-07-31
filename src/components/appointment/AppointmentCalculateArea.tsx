@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import NiceSelect from "@/ui/NiceSelect";
 
-const AppoinmentCalculateArea = () => {
+const AppointmentCalculateArea = () => {
   const selectHandler = (e: any) => { };
   const [selectedSpecialization, setSelectedSpecialization] = useState("1");
   const [selectedDoctor, setSelectedDoctor] = useState("0");
@@ -293,4 +293,4 @@ const AppoinmentCalculateArea = () => {
   );
 };
 
-export default AppoinmentCalculateArea;
+export default AppointmentCalculateArea;

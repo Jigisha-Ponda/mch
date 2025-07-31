@@ -27,7 +27,7 @@ const MenuData: MenuDataType[] = [
   {
     id: 2,
     title: "Appointment",
-    link: "/appoinment",
+    link: "/appointment",
     has_dropdown: true, 
     sub_menus: [
       { link: "/",                            title: "Home style 1",},

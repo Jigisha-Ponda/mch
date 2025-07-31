@@ -14,7 +14,7 @@ const MobileMenus = ({ isOpenMenu, setIsOpenMenu }: any) => {
         <div className="offcanvas-header">
           <button type="button" className="btn-close" aria-label="Close" onClick={() => setIsOpenMenu(false)}></button>
         </div>
-        <div className="offcanvas-body">
+        {/* <div className="offcanvas-body">
           {MenuData.map((item, i) =>
             <Collapsible trigger={item.title.replace("+", "")} triggerTagName="div" key={i}
               triggerOpenedClassName="icon_close" triggerClassName="iconAdd" open={false}>
@@ -27,9 +27,17 @@ const MobileMenus = ({ isOpenMenu, setIsOpenMenu }: any) => {
               </ul>
             </Collapsible>
           )}
+        </div> */}
+        <div className="offcanvas-body">
+          <ul className="sidebar_menu text-white">
+            {MenuData.map((item, i) => (
+              <li key={i} className="my-3">
+                <Link href={item.link}>{item.title.replace("+", "")}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-
     </>
   );
 };

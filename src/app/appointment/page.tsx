@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Wrapper from '@/layout/Wrapper';
-import Appoinment from '@/components/appoinment';
+import Appointment from '@/components/appointment';
 
 export const metadata = {
   title: "Appointment",
@@ -10,7 +10,7 @@ export const metadata = {
 const index = () => {
   return (
     <Wrapper>
-      <Appoinment />
+      <Appointment />
     </Wrapper>
   );
 };
