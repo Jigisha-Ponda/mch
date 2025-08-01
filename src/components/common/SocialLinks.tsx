@@ -117,7 +117,7 @@ const team_social_data: TeamSocialLinksDataType[] = [
   },
   {
     id: 6,
-    link: "https://youtube.com",
+    link: "https://www.youtube.com/@MCHHospital-x2l",
     icon: "fab fa-youtube",
   },
   {
@@ -140,11 +140,11 @@ const team_social_data: TeamSocialLinksDataType[] = [
     link: "https://instagram.com",
     icon: "fab fa-instagram",
   },
-  {
-    id: 4,
-    link: "http://pinterest.com",
-    icon: "fab fa-pinterest",
-  },
+  // {
+  //   id: 4,
+  //   link: "http://pinterest.com",
+  //   icon: "fab fa-pinterest",
+  // },
   // {
   //   id: 5,
   //   link: "https://linkedin.com",

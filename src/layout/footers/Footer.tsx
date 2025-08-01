@@ -176,16 +176,16 @@ const Footer = () => {
                       <div className="h4footer-social">
                         <ul className="list-inline">
                           <li>
-                            <a href="https://www.facebook.com/p/MCH-100063745580072/"><i className="fab fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com/p/MCH-100063745580072/" target="_blank"><i className="fab fa-facebook-f"></i></a>
                           </li>
                           <li>
-                            <a href="#"><i className="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank"><i className="fab fa-twitter"></i></a>
                           </li>
                           <li>
-                            <a href="https://g.co/kgs/fGU5XhB"><i className="fab fa-google"></i></a>
+                            <a href="https://g.co/kgs/fGU5XhB" target="_blank"><i className="fab fa-google"></i></a>
                           </li>
                           <li>
-                            <a href="https://www.linkedin.com/company/mch-hospital/posts/?feedView=all"><i className="fab fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/company/mch-hospital/posts/?feedView=all" target="_blank"><i className="fab fa-linkedin"></i></a>
                           </li>
                         </ul>
                       </div>
