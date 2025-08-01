@@ -29,6 +29,7 @@ const ServiceContactForm = () => {
                 ]}
                 defaultCurrent={0}
                 onChange={selectHandler}
+                value=""
                 name=''
                 placeholder=''
               />
