@@ -116,14 +116,14 @@ const CheckoutArea = () => {
                         <NiceSelect
                           className="nice-select d-flex justify-content-start align-items-center"
                           options={[
-                            { value: "1", text: "Bangladesh" },
-                            { value: "2", text: "Algeria" },
-                            { value: "3", text: "Afghanistan" },
-                            { value: "4", text: "Ghana" },
-                            { value: "5", text: "Albania" },
-                            { value: "6", text: "Bahrain" },
-                            { value: "7", text: "Colombia" },
-                            { value: "8", text: "Dominican Republic" },
+                            { value: "1", text: "Bangladesh" ,disabled:false},
+                            { value: "2", text: "Algeria" ,disabled:false},
+                            { value: "3", text: "Afghanistan",disabled:false },
+                            { value: "4", text: "Ghana",disabled:false },
+                            { value: "5", text: "Albania",disabled:false },
+                            { value: "6", text: "Bahrain",disabled:false },
+                            { value: "7", text: "Colombia",disabled:false },
+                            { value: "8", text: "Dominican Republic",disabled:false},
                           ]}
                           value=""
                           defaultCurrent={0}
@@ -264,14 +264,14 @@ const CheckoutArea = () => {
                             <NiceSelect
                               className="nice-select d-flex justify-content-start align-items-center"
                               options={[
-                                { value: "1", text: "Bangladesh" },
-                                { value: "2", text: "Algeria" },
-                                { value: "3", text: "Afghanistan" },
-                                { value: "4", text: "Ghana" },
-                                { value: "5", text: "Albania" },
-                                { value: "6", text: "Bahrain" },
-                                { value: "7", text: "Colombia" },
-                                { value: "8", text: "Dominican Republic" },
+                                { value: "1", text: "Bangladesh",disabled:false },
+                                { value: "2", text: "Algeria",disabled:false },
+                                { value: "3", text: "Afghanistan",disabled:false },
+                                { value: "4", text: "Ghana",disabled:false },
+                                { value: "5", text: "Albania",disabled:false},
+                                { value: "6", text: "Bahrain",disabled:false },
+                                { value: "7", text: "Colombia",disabled:false },
+                                { value: "8", text: "Dominican Republic",disabled:false },
                               ]}
                               defaultCurrent={0}
                               onChange={selectHandler}

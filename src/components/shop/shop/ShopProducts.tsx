@@ -65,10 +65,10 @@ const ShopProducts = () => {
                 <NiceSelect
                   className="pro-filter"
                   options={[
-                    { value: "1", text: "Shop By" },
-                    { value: "2", text: "Top Sales" },
-                    { value: "3", text: "New Product" },
-                    { value: "4", text: "A to Z Product" },
+                    { value: "1", text: "Shop By",disabled:false },
+                    { value: "2", text: "Top Sales",disabled:false },
+                    { value: "3", text: "New Product",disabled:false },
+                    { value: "4", text: "A to Z Product",disabled:false },
                   ]}
                   value=""
                   defaultCurrent={0}

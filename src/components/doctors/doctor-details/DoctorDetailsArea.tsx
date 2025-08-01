@@ -1,5 +1,4 @@
 'use client'
-import NiceSelect from '@/ui/NiceSelect';
 import Image from 'next/image';
 import React from 'react';
 

@@ -41,8 +41,8 @@ const ServiceCalculateArea = () => {
                       <NiceSelect
                         className="postform"
                         options={[
-                          { value: "When would you like our support?", text: "01. When would you like our support?" },
-                          { value: "When would you like our support?", text: "02. When would you like our support?" },
+                          { value: "When would you like our support?", text: "01. When would you like our support?",disabled:false },
+                          { value: "When would you like our support?", text: "02. When would you like our support?",disabled:false },
                         ]}
                         value=""
                         defaultCurrent={0}
@@ -55,8 +55,8 @@ const ServiceCalculateArea = () => {
                       <NiceSelect
                         className="postform"
                         options={[
-                          { value: "When would you like us arrive?", text: "01. When would you like us arrive?" },
-                          { value: "When would you like our support?", text: "02. When would you like our support?" },
+                          { value: "When would you like us arrive?", text: "01. When would you like us arrive?",disabled:false },
+                          { value: "When would you like our support?", text: "02. When would you like our support?",disabled:false },
                         ]}
                         value=""
                         defaultCurrent={0}
@@ -69,8 +69,8 @@ const ServiceCalculateArea = () => {
                       <NiceSelect
                         className="postform"
                         options={[
-                          { value: "How long should we stay?", text: "01. How long should we stay?" },
-                          { value: "When would you like our support?", text: "02. When would you like our support?" },
+                          { value: "How long should we stay?", text: "01. How long should we stay?",disabled:false },
+                          { value: "When would you like our support?", text: "02. When would you like our support?",disabled:false },
                         ]}
                         value=""
                         defaultCurrent={0}
@@ -83,9 +83,9 @@ const ServiceCalculateArea = () => {
                       <NiceSelect
                         className="postform"
                         options={[
-                          { value: "Where are you located?", text: "01. Where are you located?" },
-                          { value: "When would you like our support?", text: "02. When would you like our support?" },
-                          { value: "When would you like our support?", text: "03. When would you like our support?" },
+                          { value: "Where are you located?", text: "01. Where are you located?",disabled:false },
+                          { value: "When would you like our support?", text: "02. When would you like our support?",disabled:false },
+                          { value: "When would you like our support?", text: "03. When would you like our support?" ,disabled:false},
                         ]}
                         value=""
                         defaultCurrent={0}
