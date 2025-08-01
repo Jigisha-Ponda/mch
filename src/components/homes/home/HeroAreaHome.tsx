@@ -39,22 +39,22 @@ const setting = {
 const hero_slider_data = [
   {
     id: 1,
-    title: "Health & Doctor",
-    sm_des: "Avoids pleasure itself, because it is pleasure, but because those who do not know how rationally encounter consequences that extremely system weathe.",
+    title: "Trusted Healthcare Services",
+    sm_des: "We provide personalized medical care with advanced technology, ensuring comfort and confidence throughout your treatment journey.",
     feature_list: [
-      "Digital Laboratory & Computerized System",
-      "Digital Laboratory & Computerized System",
-      "Digital Laboratory & Computerized System",
+      "Modern Diagnostic Lab Facilities",
+      "Fully Computerized Patient Management",
+      "Expert Doctors Across Specialties",
     ],
   },
   {
     id: 2,
-    title: "Doctor & Health",
-    sm_des: "Rationally encounter consequences Avoids pleasure itself, because it is pleasure, but because those who do not know how that extremely system weathe.",
+    title: "Expert Doctors, Advanced Care",
+    sm_des: "Experience compassionate care from skilled medical professionals using the latest healthcare systems for accurate diagnosis and treatment.",
     feature_list: [
-      "Digital Laboratory & Computerized System",
-      "Digital Laboratory & Computerized System",
-      "Digital Laboratory & Computerized System",
+      "Digital Health Monitoring Systems",
+      "Seamless Appointment & Record Management",
+      "Multidisciplinary Medical Expertise",
     ],
   },
 ]
@@ -105,8 +105,8 @@ const HeroAreaHome = ({ style }: any) => {
                           <Link data-animation="fadeInLeft" data-delay=".9s"
                             href="/appointment" className="btn btn-icon ml-0"><span>+</span>learn more
                           </Link>
-                          <Link data-animation="fadeInLeft" data-delay="1s" 
-                            href="/appointment" className="btn btn-icon btn-icon-green ml-0 mt-2 mt-lg-0"><span>+</span>Our services
+                          <Link data-animation="fadeInLeft" data-delay="1s"
+                            href="/gallery" className="btn btn-icon btn-icon-green ml-0 mt-2 mt-lg-0"><span>+</span>Our services
                           </Link>
                         </div>
                       </div>
@@ -229,7 +229,7 @@ export default HeroAreaHome;
 //                 className={`single-slider pos-rel d-flex align-items-center pl-55`}
 //                 style={{
 //                   backgroundImage: `url(${item.bgImage})`,
-//                   backgroundSize: 'cover', 
+//                   backgroundSize: 'cover',
 //                   backgroundPosition: 'center',
 //                   backgroundRepeat: 'no-repeat',
 //                   backgroundColor: '#000', // optional: fills background space

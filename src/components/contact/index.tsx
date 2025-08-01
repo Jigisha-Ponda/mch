@@ -12,7 +12,7 @@ const Contact = () => {
     <>
       <Header />
       <main>
-        <Breadcrumb sub_title='We are here for your care.' title='Contact Us' page='Contact' />
+        <Breadcrumb sub_title='Your Health, Our Priority — Let’s Connect' title='Contact Us' page='Contact' />
         <ContactArea />
         <ContactFormArea />
         <ContactMap />

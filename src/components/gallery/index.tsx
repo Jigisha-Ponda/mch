@@ -9,7 +9,7 @@ const Gallery = () => {
     <>
       <Header />
       <main>
-        <Breadcrumb sub_title='We are here for your care.' title='Gallery' page='Gallery' />
+        <Breadcrumb sub_title='Inside MCH – Where Care Meets Excellence' title='Gallery' page='Gallery' />
         <PhotoGalleryHome/>
       </main>
       <Footer />

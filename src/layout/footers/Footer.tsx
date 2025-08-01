@@ -8,7 +8,7 @@ import blog_thumb_1 from "@/assets/img/blog/feeds-thumb-1.jpg";
 import blog_thumb_2 from "@/assets/img/blog/feeds-thumb-2.jpg";
 import blog_thumb_3 from "@/assets/img/blog/feeds-thumb-3.jpg";
 
-import footer_logo_three from "@/assets/img/mch/logo.webp";
+import footer_logo_three from "@/assets/img/mch/logo.png";
 
 interface DataType {
   sm_des: string;
@@ -97,7 +97,7 @@ const Footer = () => {
               <div className="col-xl-4 col-lg-6">
                 <div className="footer-contact-info footer-contact-info-3 mb-40">
                   <div className="footer-logo mb-35">
-                    <Link href="/"><Image src={footer_logo_three} alt="theme-pure" /></Link>
+                    <Link href="/"><Image src={footer_logo_three} alt="theme-pure" className="mch-logo"/></Link>
                   </div>
                   <div className="footer-contact-content mb-25">
                     <p>{sm_des}</p>

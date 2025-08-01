@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NavMenu from './Menu/NavMenu';
 import UseSticky from '@/hooks/UseSticky';
-import HeaderLogo from "@/assets/img/mch/logo.webp";
+import HeaderLogo from "@/assets/img/mch/logo.png";
 import { TeamSocialLinks } from '@/components/common/SocialLinks';
 import plag_icon from '@/assets/img/icon/lang.png';
 import MobileMenus from './Menu/MobileMenus';
@@ -59,14 +59,14 @@ const Header = () => {
         <div className={`header-menu-area menu-area4 pl-55 pr-55 ${sticky ? "sticky_menu" : ""} `}>
           <div className="container-fluid">
             <div className="row align-items-center">
-              <div className="col-xl-4 col-lg-9 col-10 d-flex justify-content-between align-items-center navbar__wrapper">
+              <div className="col-xl-3 col-lg-9 col-10 d-flex justify-content-between align-items-center navbar__wrapper">
                 <div className="logo pos-rel">
                   <Link href="/">
-                    <Image src={HeaderLogo}  alt="MediDove" />
+                    <Image src={HeaderLogo}  alt="MediDove" className="mch-logo"/>
                   </Link>
                 </div>
               </div>
-              <div className="col-xl-4 col-lg-3 col-2 align-items-center justify-content-center">
+              <div className="col-xl-5 col-lg-3 col-2 align-items-center justify-content-center">
                 <div className="header__menu header__menu4 d-none d-xl-flex justify-content-center">
                   <nav id="mobile-menu">
                     <NavMenu home_4={true} />  

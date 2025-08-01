@@ -466,6 +466,10 @@ label {
 	margin-bottom: 10px;
 }
 
+.mch-logo{
+	height:70px!important;
+	width:auto!important;
+}
 /* header menu area */
 .logo img {
 	position: relative;
