@@ -23,9 +23,9 @@ const ServiceContactForm = () => {
               <NiceSelect
                 className="service-option"
                 options={[
-                  { value: "1", text: "01. Select type of care" },
-                  { value: "2", text: "02. Select type of care" },
-                  { value: "3", text: "03. Select type of care" },
+                  { value: "1", text: "01. Select type of care",disabled:false },
+                  { value: "2", text: "02. Select type of care",disabled:false },
+                  { value: "3", text: "03. Select type of care",disabled:false },
                 ]}
                 defaultCurrent={0}
                 onChange={selectHandler}
