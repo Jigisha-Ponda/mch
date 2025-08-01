@@ -3,7 +3,7 @@ import Wrapper from '@/layout/Wrapper';
 import React from 'react';
 
 export const metadata = {
-  title: "Home",
+  title: "MCH Hospital",
 };
 
 const HomeMain = () => {

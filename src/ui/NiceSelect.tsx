@@ -14,6 +14,7 @@ type NiceSelectProps = {
   className?: string;
   onChange: (item: Option, name: string) => void;
   name: string;
+  value:string;
 }
 
 const NiceSelect: FC<NiceSelectProps> = ({
@@ -23,6 +24,7 @@ const NiceSelect: FC<NiceSelectProps> = ({
   className,
   onChange,
   name,
+  value
 }) => {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState<Option>(options[defaultCurrent]);

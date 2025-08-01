@@ -88,7 +88,7 @@ const HeroAreaHome = ({ style }: any) => {
               <div key={i} className={`single-slider ${style ? "h4slider-bg h5slider_bg " : "h4slider-bg"} pos-rel d-flex align-items-center pl-55`}>
                 <div className="container-fluid">
                   <div className="row">
-                    <div className="col-xl-8 col-lg-12 col-md-10">
+                    <div className="col-xl-7 col-lg-12 col-md-10">
                       <div className="hero-text">
                         <div className="hero-slider-caption h4hero-content mb-35">
                           <h1 className="white-color" data-animation="fadeInUp" data-delay=".4s">{item.title}</h1>

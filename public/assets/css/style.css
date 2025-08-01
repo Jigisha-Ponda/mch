@@ -466,10 +466,11 @@ label {
 	margin-bottom: 10px;
 }
 
-.mch-logo{
-	height:70px!important;
-	width:auto!important;
+.mch-logo {
+	height: 70px !important;
+	width: auto !important;
 }
+
 /* header menu area */
 .logo img {
 	position: relative;
@@ -1118,18 +1119,18 @@ input.main-search-input:-ms-input-placeholder {
 }
 
 .medical-icon-brand-3 {
-	right: -65px!important;
+	right: -65px !important;
 	margin-top: 21px;
 }
 
-.mission-vision-icon{
-	width:40px;
-	height:40px;
+.mission-vision-icon {
+	width: 40px;
+	height: 40px;
 }
 
-.specialist-doctors-icon{
-	height:20px!important;
-	width:20px!important;
+.specialist-doctors-icon {
+	height: 20px !important;
+	width: 20px !important;
 }
 
 .medical-icon-brand::before {
@@ -2016,12 +2017,12 @@ li.price-del i {
 	padding-right: 20px;
 }
 
-.footer-contact-content p{
-	font-size:16px;
+.footer-contact-content p {
+	font-size: 16px;
 }
 
 .footer-emailing ul li {
-	font-size: 16px!important;
+	font-size: 16px !important;
 	color: #647589;
 	margin-bottom: 12px;
 }
@@ -2030,7 +2031,7 @@ li.price-del i {
 	color: #91a1b4;
 }
 
-.footer-contact-info-3 .footer-emailing ul li a{
+.footer-contact-info-3 .footer-emailing ul li a {
 	color: #91a1b4;
 }
 
@@ -2740,6 +2741,9 @@ li.price-del i {
 	height: 120px;
 }
 
+.appointment-form-3 textarea::placeholder{
+	color:#647589;
+}
 .appointment-area-3 .calculate-box .nice-select {
 	border: 2px solid #d3e2f0;
 }
@@ -5572,11 +5576,23 @@ p.checkout-coupon input[type="text"] {
 }
 
 .h4slider-bg {
-	padding-top: 100px!important;
-	padding-bottom: 100px!important;
+	padding-top: 100px !important;
+	padding-bottom: 100px !important;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-left: 130px!important;
+	padding-left: 220px !important;
+}
+
+.swal2-confirm .swal2-styled {
+	background-color: #3399FF!important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
+	background-color: #3399FF!important;
+}
+
+.select_style.error {
+	border: 1px solid red;
 }
 
 .call-btn {
@@ -5938,7 +5954,7 @@ p.checkout-coupon input[type="text"] {
 
 .h4gallery-active .slick-dots li.slick-active button,
 .h5service-active .slick-dots li.slick-active button {
-	background:rgb(51, 153, 255)!important;
+	background: rgb(51, 153, 255) !important;
 }
 
 .h5service-active .slick-dots li button {
@@ -6134,7 +6150,7 @@ p.checkout-coupon input[type="text"] {
 	padding-left: 35px;
 	overflow: hidden;
 	display: inline-block;
-	font-size: 16px!important;
+	font-size: 16px !important;
 	font-weight: 500;
 	color: #91a1b4;
 }
@@ -6197,7 +6213,7 @@ p.checkout-coupon input[type="text"] {
 .h5services-content>p {
 	color: #c0d0dc;
 	margin-bottom: 30px;
-	min-height:130px!important;
+	min-height: 130px !important;
 }
 
 .h5services-content>a>span.link {

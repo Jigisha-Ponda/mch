@@ -1,17 +1,36 @@
 "use client";
 import React, { useState, useRef } from "react";
 import NiceSelect from "@/ui/NiceSelect";
+import Swal from 'sweetalert2';
 
 const AppointmentCalculateArea = () => {
   const selectHandler = (e: any) => { };
-  const [selectedSpecialization, setSelectedSpecialization] = useState("1");
-  const [selectedDoctor, setSelectedDoctor] = useState("0");
+  const [selectedSpecialization, setSelectedSpecialization] = useState("");
+  const [specializationError, setSpecializationError] = useState(false);
+
+  const [selectedDoctor, setSelectedDoctor] = useState("");
+  const [doctorError, setDoctorError] = useState(false);
+
+  const [selectedShift, setSelectedShift] = useState("");
+  const [shiftError, setShiftError] = useState(false);
+
+  const [liveConsultation, setLiveConsultation] = useState("");
+  const [liveError, setLiveError] = useState(false);
+
+  const [appointmentDate, setAppointmentDate] = useState("");
+  const [dateError, setDateError] = useState(false);
+
+  const [request, setRequest] = useState("");
+  const [requestError, setRequestError] = useState(false);
+
   const inputRef = useRef<HTMLInputElement>(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const openDatePicker = () => {
     if (inputRef.current) {
-      inputRef.current.showPicker?.(); 
-      inputRef.current.focus();       
+      inputRef.current.showPicker?.();
+      inputRef.current.focus();
     }
   };
 
@@ -146,6 +165,83 @@ const AppointmentCalculateArea = () => {
   const handleDoctorChange = (selected: { value: string; text: string }) => {
     setSelectedDoctor(selected.value);
   };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    let hasError = false;
+    if (!selectedSpecialization || selectedSpecialization === "0") {
+      setSpecializationError(true);
+      hasError = true;
+    }
+
+    if (!selectedDoctor || selectedDoctor === "0") {
+      setDoctorError(true);
+      hasError = true;
+    }
+
+    if (!selectedShift) {
+      setShiftError(true);
+      hasError = true;
+    }
+
+    if (!liveConsultation) {
+      setLiveError(true);
+      hasError = true;
+    }
+
+    if (!appointmentDate) {
+      setDateError(true);
+      hasError = true;
+    }
+
+    if (!request.trim()) {
+      setRequestError(true);
+      hasError = true;
+    }
+
+    if (hasError) return;
+
+    const formData = {
+      specialization: selectedSpecialization,
+      doctor: selectedDoctor,
+      shift: selectedShift,
+      live: liveConsultation,
+      date: appointmentDate,
+      request,
+    };
+
+    try {
+      const res = await fetch("/app/api/appointments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        Swal.fire("Success!", "Appointment submitted successfully.", "success");
+        // Reset
+        setSelectedSpecialization("");
+        setSelectedDoctor("");
+        setSelectedShift("");
+        setLiveConsultation("");
+        setAppointmentDate("");
+        setRequest("");
+
+        // Clear errors
+        setSpecializationError(false);
+        setDoctorError(false);
+        setShiftError(false);
+        setLiveError(false);
+        setDateError(false);
+        setRequestError(false);
+      } else {
+        throw new Error("Failed to submit");
+      }
+    } catch (err) {
+      Swal.fire("Error", "Something went wrong!", "error");
+    }
+  };
+
   return (
     <>
       <section
@@ -167,9 +263,118 @@ const AppointmentCalculateArea = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="row">
+                  <form onSubmit={handleSubmit}>
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-6 col-md-6">
+                        <NiceSelect
+                          className={`select_style ${specializationError ? 'error' : ''}`}
+                          options={specializationOptions}
+                          value={selectedSpecialization}
+                          defaultCurrent={0}
+                          onChange={(selected) => {
+                            setSelectedSpecialization(selected.value);
+                            setSpecializationError(false);
+                            setSelectedDoctor("");
+                          }}
+                          name="specialization"
+                          placeholder=""
+                        />
+                        {specializationError && (
+                          <p className="text-danger">Please select a specialization.</p>
+                        )}
+                      </div>
+                      <div className="col-xl-6 col-lg-6 col-md-6">
+                        <NiceSelect
+                          key={selectedSpecialization}
+                          className={`select_style ${doctorError ? 'error' : ''}`}
+                          options={
+                            selectedSpecialization === ""
+                              ? [{ value: "", text: "Select Doctor" }]
+                              : doctorList[selectedSpecialization] || [{ value: "", text: "Select Doctor" }]
+                          }
+                          value={selectedDoctor}
+                          defaultCurrent={0}
+                          onChange={(selected) => {setSelectedDoctor(selected.value); setDoctorError(false);}}
+                          name="doctor"
+                          placeholder=""
+                        />
+                        {doctorError && <p className="text-danger">Please select a doctor.</p>}
+                      </div>
+                      <div className="col-xl-6 col-lg-6 col-md-6">
+                        <NiceSelect
+                            className={`select_style ${shiftError ? 'error' : ''}`}
+                          options={
+                            selectedDoctor && selectedDoctor !== "0"
+                              ? [
+                                { value: "", text: "Select Shift" },
+                                { value: "morning", text: "Morning" },
+                                { value: "evening", text: "Evening" }
+                              ]
+                              : [{ value: "", text: "Select Shift" }]
+                          }
+                          value={selectedShift}
+                          defaultCurrent={0}
+                          onChange={(selected) => {setSelectedShift(selected.value); setShiftError(false);}}
+                          name="shift"
+                          placeholder=""
+                        />
+                        {shiftError && <p className="text-danger">Please select a shift.</p>}
+                      </div>
+                      <div className="col-xl-6 col-lg-6 col-md-6">
+                        <NiceSelect
+                         className={`select_style ${liveError ? 'error' : ''}`}
+                          options={[
+                            { value: "", text: "Live Consultation" },
+                            { value: "yes", text: "Yes" },
+                            { value: "no", text: "No" },
+                          ]}
+                          value={liveConsultation} 
+                          defaultCurrent={0}
+                          onChange={(selected) => {setLiveConsultation(selected.value); setLiveError(false);}}
+                          name="live"
+                          placeholder="Live Consultation"
+                        />
+                        {liveError && <p className="text-danger">Please select live consultation preference.</p>}
+                      </div>
+                      <div className="col-xl-12">
+                        <div className="calculate-form appointment-form-3 mb-20">
+                          <input
+                            type="date"
+                            ref={inputRef}
+                            placeholder="Select date"
+                            className="form-control"
+                            onChange={(e) => {setAppointmentDate(e.target.value); setDateError(false);}}
+                            value={appointmentDate} 
+                          />
+                          <i
+                            className="far fa-calendar"
+                            onClick={openDatePicker}
+                            style={{ cursor: "pointer" }}
+                          ></i>
+                          {dateError && <p className="text-danger">Please select a date.</p>}
+                        </div>
+                      </div>
+                      <div className="col-xl-12">
+                        <div className="calculate-form appointment-form-3 mb-20">
+                          <textarea
+                            name="Special request"
+                            cols={30}
+                            rows={10}
+                            value={request}
+                            placeholder="Special request"
+                            onChange={(e) => {setRequest(e.target.value); setRequestError(false);}}
+                          ></textarea>
+                          <i className="far fa-edit"></i>
+                          {requestError && <p className="text-danger">Please enter a special request.</p>}
+                          <button type="submit" className="primary_btn btn mt-40">
+                            Submit Query
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  {/* <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-6">
-                      {/* <label className="form-label">Specialist</label> */}
                       <NiceSelect
                         className="select_style"
                         options={specializationOptions}
@@ -180,7 +385,6 @@ const AppointmentCalculateArea = () => {
                       />
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-6">
-                      {/* <label className="form-label">Doctor</label> */}
                       <NiceSelect
                         key={selectedSpecialization}
                         className="select_style"
@@ -196,7 +400,6 @@ const AppointmentCalculateArea = () => {
                       />
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-6">
-                      {/* <label className="form-label">Shift</label> */}
                       <NiceSelect
                         className="select_style"
                         options={
@@ -229,15 +432,6 @@ const AppointmentCalculateArea = () => {
                         placeholder="Live Consultation"
                       />
                     </div>
-                    {/* <div className="col-xl-6 col-lg-6 col-md-6">
-                      <form
-                        className="calculate-form appointment-form-3 mb-20"
-                        action="#"
-                      >
-                        <input type="text" placeholder="Your Phone number" />
-                        <i className="fas fa-phone"></i>
-                      </form>
-                    </div> */}
                     <div className="col-xl-12 col-lg-6 col-md-6">
                       <form
                         className="calculate-form appointment-form-3 mb-20"
@@ -256,15 +450,6 @@ const AppointmentCalculateArea = () => {
                         ></i>
                       </form>
                     </div>
-                    {/* <div className="col-xl-6 col-lg-6 col-md-6">
-                      <form
-                        className="calculate-form appointment-form-3 mb-20"
-                        onSubmit={e => e.preventDefault()}
-                      >
-                        <input type="text" placeholder="Add time" />
-                        <i className="far fa-clock"></i>
-                      </form>
-                    </div> */}
                     <div className="col-xl-12">
                       <form
                         className="calculate-form appointment-form-3 mb-20"
@@ -277,12 +462,12 @@ const AppointmentCalculateArea = () => {
                           placeholder="Special request"
                         ></textarea>
                         <i className="far fa-edit"></i>
-                        <a href="#" className="primary_btn btn mt-40">
+                        <a onClick={handleSubmit} className="primary_btn btn mt-40">
                           submit query
                         </a>
                       </form>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

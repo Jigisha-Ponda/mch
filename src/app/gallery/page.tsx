@@ -4,7 +4,7 @@ import Wrapper from '@/layout/Wrapper';
 import Gallery from '@/components/gallery';
 
 export const metadata = {
-  title: "Gallery",
+  title: "Gallery | MCH Hospital",
 };
 
 const index = () => {

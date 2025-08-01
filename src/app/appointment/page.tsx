@@ -4,7 +4,7 @@ import Wrapper from '@/layout/Wrapper';
 import Appointment from '@/components/appointment';
 
 export const metadata = {
-  title: "Appointment",
+  title: "Appointment | MCH Hospital",
 };
 
 const index = () => {
