@@ -125,6 +125,7 @@ const CheckoutArea = () => {
                             { value: "7", text: "Colombia" },
                             { value: "8", text: "Dominican Republic" },
                           ]}
+                          value=""
                           defaultCurrent={0}
                           onChange={selectHandler}
                           name=""
@@ -274,6 +275,7 @@ const CheckoutArea = () => {
                               ]}
                               defaultCurrent={0}
                               onChange={selectHandler}
+                              value=""
                               name=""
                               placeholder=""
                             />

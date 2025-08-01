@@ -70,6 +70,7 @@ const ShopProducts = () => {
                     { value: "3", text: "New Product" },
                     { value: "4", text: "A to Z Product" },
                   ]}
+                  value=""
                   defaultCurrent={0}
                   onChange={selectHandler}
                   name=''

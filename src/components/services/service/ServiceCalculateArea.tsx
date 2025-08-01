@@ -44,6 +44,7 @@ const ServiceCalculateArea = () => {
                           { value: "When would you like our support?", text: "01. When would you like our support?" },
                           { value: "When would you like our support?", text: "02. When would you like our support?" },
                         ]}
+                        value=""
                         defaultCurrent={0}
                         onChange={selectHandler}
                         name=''
@@ -57,6 +58,7 @@ const ServiceCalculateArea = () => {
                           { value: "When would you like us arrive?", text: "01. When would you like us arrive?" },
                           { value: "When would you like our support?", text: "02. When would you like our support?" },
                         ]}
+                        value=""
                         defaultCurrent={0}
                         onChange={selectHandler}
                         name=''
@@ -70,6 +72,7 @@ const ServiceCalculateArea = () => {
                           { value: "How long should we stay?", text: "01. How long should we stay?" },
                           { value: "When would you like our support?", text: "02. When would you like our support?" },
                         ]}
+                        value=""
                         defaultCurrent={0}
                         onChange={selectHandler}
                         name=''
@@ -84,6 +87,7 @@ const ServiceCalculateArea = () => {
                           { value: "When would you like our support?", text: "02. When would you like our support?" },
                           { value: "When would you like our support?", text: "03. When would you like our support?" },
                         ]}
+                        value=""
                         defaultCurrent={0}
                         onChange={selectHandler}
                         name=''
