@@ -51,10 +51,10 @@ const AboutVideoArea = () => {
               <div className="about-left-side pos-rel mb-30">
                 <div className="about-front-img pos-rel">
                   <Image src={about_img} alt="theme-pure" className="mission-vision-icon"/>
-                  <a className="popup-video about-video-btn white-video-btn"
+                  {/* <a className="popup-video about-video-btn white-video-btn"
                     onClick={() => setIsVideoOpen(true)}
                     style={{ cursor: "pointer" }}
-                  ><i className="fas fa-play"></i></a>
+                  ><i className="fas fa-play"></i></a> */}
                 </div>
                 <div className="about-shape">
                   <Image src={about_shape} alt="theme-pure"/>

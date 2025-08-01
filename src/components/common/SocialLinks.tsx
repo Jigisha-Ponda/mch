@@ -107,7 +107,7 @@ interface TeamSocialLinksDataType {
 const team_social_data: TeamSocialLinksDataType[] = [
   {
     id: 1,
-    link: "http://facebook.com",
+    link: "https://www.facebook.com/p/MCH-100063745580072/",
     icon: "fab fa-facebook-f",
   },
   {
@@ -122,7 +122,7 @@ const team_social_data: TeamSocialLinksDataType[] = [
   },
   {
     id: 7,
-    link: "https://plus.google.com",
+    link: "https://g.co/kgs/fGU5XhB",
     icon: "fab fa-google-plus-g",
   },
   // {
@@ -132,7 +132,7 @@ const team_social_data: TeamSocialLinksDataType[] = [
   // },
   {
     id: 5,
-    link: "http://linkedin.com",
+    link: "https://www.linkedin.com/company/mch-hospital/posts/?feedView=all",
     icon: "fab fa-linkedin",
   },
   {

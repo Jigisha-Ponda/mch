@@ -85,7 +85,7 @@ const footer_content: DataType = {
   office_open_time_2: "09:30 pm - 17:30 pm",
   office_open_time_3: "09:30 pm - 15:00 pm",
 }
-const { sm_des, email, phone1, phone2, address, link_data, footer_blog_data, office_open_title, office_open_day_1, office_open_time_1,office_open_day_2, office_open_time_2,office_open_day_3, office_open_time_3 } = footer_content
+const { sm_des, email, phone1, phone2, address, link_data, footer_blog_data, office_open_title, office_open_day_1, office_open_time_1, office_open_day_2, office_open_time_2, office_open_day_3, office_open_time_3 } = footer_content
 
 const Footer = () => {
   return (
@@ -97,7 +97,7 @@ const Footer = () => {
               <div className="col-xl-4 col-lg-6">
                 <div className="footer-contact-info footer-contact-info-3 mb-40">
                   <div className="footer-logo mb-35">
-                    <Link href="/"><Image src={footer_logo_three} alt="theme-pure" className="mch-logo"/></Link>
+                    <Link href="/"><Image src={footer_logo_three} alt="theme-pure" className="mch-logo" /></Link>
                   </div>
                   <div className="footer-contact-content mb-25">
                     <p>{sm_des}</p>
@@ -176,13 +176,16 @@ const Footer = () => {
                       <div className="h4footer-social">
                         <ul className="list-inline">
                           <li>
-                            <a href="#"><i className="fab fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com/p/MCH-100063745580072/"><i className="fab fa-facebook-f"></i></a>
                           </li>
                           <li>
                             <a href="#"><i className="fab fa-twitter"></i></a>
                           </li>
                           <li>
-                            <a href="#"><i className="fab fa-google"></i></a>
+                            <a href="https://g.co/kgs/fGU5XhB"><i className="fab fa-google"></i></a>
+                          </li>
+                          <li>
+                            <a href="https://www.linkedin.com/company/mch-hospital/posts/?feedView=all"><i className="fab fa-linkedin"></i></a>
                           </li>
                         </ul>
                       </div>

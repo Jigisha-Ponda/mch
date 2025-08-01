@@ -5572,11 +5572,11 @@ p.checkout-coupon input[type="text"] {
 }
 
 .h4slider-bg {
-	padding-top: 210px;
-	padding-bottom: 230px;
+	padding-top: 100px!important;
+	padding-bottom: 100px!important;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-left: 220px;
+	padding-left: 130px!important;
 }
 
 .call-btn {
