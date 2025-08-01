@@ -1118,8 +1118,18 @@ input.main-search-input:-ms-input-placeholder {
 }
 
 .medical-icon-brand-3 {
-	right: -106px;
+	right: -65px!important;
 	margin-top: 21px;
+}
+
+.mission-vision-icon{
+	width:40px;
+	height:40px;
+}
+
+.specialist-doctors-icon{
+	height:20px!important;
+	width:20px!important;
 }
 
 .medical-icon-brand::before {
@@ -5928,7 +5938,7 @@ p.checkout-coupon input[type="text"] {
 
 .h4gallery-active .slick-dots li.slick-active button,
 .h5service-active .slick-dots li.slick-active button {
-	background: #ffc600;
+	background:rgb(51, 153, 255)!important;
 }
 
 .h5service-active .slick-dots li button {

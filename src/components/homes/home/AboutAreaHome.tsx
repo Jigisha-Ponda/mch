@@ -7,10 +7,10 @@ import bg_icon_1 from "@/assets/img/icon/services_bg_icon1.png";
 import bg_icon_2 from "@/assets/img/icon/services_bg_icon2.png";
 import bg_icon_3 from "@/assets/img/icon/services_bg_icon3.png";
 
-import icon_1 from "@/assets/img/icon/h5services__icon1.png";
-import icon_2 from "@/assets/img/icon/h5services__icon2.png";
-import icon_3 from "@/assets/img/icon/h5services__icon3.png";
-
+import icon_1 from "@/assets/img/mch/clinic-news.png";
+import icon_2 from "@/assets/img/mch/top-doctors.png";
+import icon_3 from "@/assets/img/mch/24-hours-service.png";
+import icon_4 from "@/assets/img/mch/opening-hours.png";
 
 interface DataType {
   sub_title: string;
@@ -63,7 +63,7 @@ const about_content: DataType = {
       id: 1,
       color_bg: "theme-bg",
       bg_img: bg_icon_1,
-      img: icon_1,
+      img: icon_3,
       title: "24 Hours Service",
       sm_des: "We are ready to serve you 24/7 with immediate emergency care services. Your health is our top priority, anytime, anywhere.",
       btn_text: "read more",
@@ -73,7 +73,7 @@ const about_content: DataType = {
       id: 1,
       color_bg: "pink-bg",
       bg_img: bg_icon_3,
-      img: icon_3,
+      img: icon_4,
       title: "Opening Hours",
       day_1: "Mon - Friday",
       day_2: "Saturday",
@@ -97,7 +97,7 @@ const AboutAreaHome = () => {
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="about-title text-center mb-60">
-                <h5 className="pink-color">{sub_title}</h5>
+                <h5 className="blue-color">{sub_title}</h5>
                 <h1>{title}</h1>
               </div>
             </div>
@@ -108,7 +108,7 @@ const AboutAreaHome = () => {
                 <div className={`h5services-wrapper ${item.color_bg}`}>
                   <i className="h5sicon-bg"><Image src={item.bg_img} alt="icon" /></i>
                   <div className="h5services-content">
-                    <i className="h5services-icon"><Image src={item.img} alt="theme-pure" /></i>
+                    <i className="h5services-icon"><Image src={item.img} alt="theme-pure" className="h-50 w-auto"/></i>
                     <h3 className="white-color h5services-title">{item.title}</h3>
                     {i === 3 ?
                       <>

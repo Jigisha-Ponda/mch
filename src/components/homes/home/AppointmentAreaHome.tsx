@@ -11,7 +11,7 @@ const AppointmentAreaHome = () => {
           <div className="col-xl-6 offset-xl-6">
             <div className="h4appoinment-wrapper">
               <div className="about-title mb-50">
-                <h5 className="pink-color">Make An Appointment</h5>
+                <h5 className="blue-color">Make An Appointment</h5>
                 <h1>
                   Get An Appointment <br />
                   For Get Release

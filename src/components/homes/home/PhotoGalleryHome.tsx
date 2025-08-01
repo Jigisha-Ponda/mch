@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import photo_gallery_data from '@/data/PhotoGalleryData';
 import back_icon from "@/assets/img/section/section-back-icon.png";
-import title_line from "@/assets/img/shape/section-title-line.png";
+import title_line from "@/assets/img/mch/line.png";
 import ImagePopup from "@/modals/ImagePopup"
 
 // data
@@ -13,7 +13,7 @@ const categories = ["All", ...new Set(photo_gallery_data.map((item) => item.cate
 
 const perView = 6;
 
-const PhotoGalleryHome = () => { 
+const PhotoGalleryHome = () => {
 
   const [activeCategory, setActiveCategory] = useState("All");
   const [items, setItems] = useState(photo_gallery_data);
@@ -47,7 +47,7 @@ const PhotoGalleryHome = () => {
     setIsOpen(true);
   };
   //  images
-  const image = items.map((item) => item.img.src); 
+  const image = items.map((item) => item.img.src);
 
 
   return (
@@ -91,17 +91,26 @@ const PhotoGalleryHome = () => {
               <div key={i} className="col-lg-4 col-md-6 grid-gallery">
                 <div className="h5gallery__wrapper pos-rel text-center mb-30">
                   <div className="h5gallery-thumb">
-                    <Image className="img" src={item?.img} alt="theme-pure" style={{ height: "400px" }}/>
+                    <Image className="img" src={item?.img} alt="theme-pure" style={{ height: "415px", width: "100%", objectFit: "cover", objectPosition: "center" }} />
                   </div>
                   <div className="h5gallery-content">
-                    <a className="popup-image" 
+                    <a className="popup-image"
                       style={{ cursor: "pointer" }}
                       onClick={() => handleImagePopup(i)}
                     >
                       <i className="fal fa-plus"></i>
                     </a>
                     <h4 className="white-color">
-                      <Link href="">{item.title}</Link>
+                      <a
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault(); 
+                          handleImagePopup(i);
+                        }}
+                        style={{ cursor: "pointer", color: "inherit", textDecoration: "none" }}
+                      >
+                        {item.title}
+                      </a>
                     </h4>
                     {/* <span><Link href="#">{item.tag_1}</Link> . <Link href="#">{item.tag_2}</Link></span> */}
                   </div>

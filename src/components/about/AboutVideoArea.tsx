@@ -1,8 +1,8 @@
 'use client'
 import Image, { StaticImageData } from 'next/image';
 import React, { useState } from 'react';
-import icon_1 from "@/assets/img/about/destination-icon-1.png";
-import icon_2 from "@/assets/img/about/destination-icon-2.png";
+import icon_1 from "@/assets/img/mch/mission.png";
+import icon_2 from "@/assets/img/mch/vision.png";
 import VideoPopup from '@/modals/VideoPopup';
 import about_img from '@/assets/img/about/about-img.jpg';
 import about_shape from "@/assets/img/about/about-shape.png";
@@ -50,14 +50,14 @@ const AboutVideoArea = () => {
             <div className="col-xl-6 col-lg-5">
               <div className="about-left-side pos-rel mb-30">
                 <div className="about-front-img pos-rel">
-                  <Image src={about_img} alt="theme-pure" />
+                  <Image src={about_img} alt="theme-pure" className="mission-vision-icon"/>
                   <a className="popup-video about-video-btn white-video-btn"
                     onClick={() => setIsVideoOpen(true)}
                     style={{ cursor: "pointer" }}
                   ><i className="fas fa-play"></i></a>
                 </div>
                 <div className="about-shape">
-                  <Image src={about_shape} alt="theme-pure" />
+                  <Image src={about_shape} alt="theme-pure"/>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const AboutVideoArea = () => {
                   {our_feature.map((item, i) =>
                     <div key={i} className={`single-item ${i === 0 ? "mb-30" : ""}`}>
                       <div className="mv-icon f-left">
-                        <Image src={item.img} alt="theme-pure" />
+                        <Image src={item.img} alt="theme-pure" className="mission-vision-icon"/>
                       </div>
                       <div className="mv-title fix">
                         <h3>{item.title}</h3>

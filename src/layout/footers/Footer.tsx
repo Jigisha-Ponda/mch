@@ -8,7 +8,7 @@ import blog_thumb_1 from "@/assets/img/blog/feeds-thumb-1.jpg";
 import blog_thumb_2 from "@/assets/img/blog/feeds-thumb-2.jpg";
 import blog_thumb_3 from "@/assets/img/blog/feeds-thumb-3.jpg";
 
-import footer_logo_three from "@/assets/img/mch/logo.png";
+import footer_logo_three from "@/assets/img/mch/mch-footer-logo.png";
 
 interface DataType {
   sm_des: string;

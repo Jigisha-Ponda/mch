@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 import back_icon from "@/assets/img/section/section-back-icon.png";
-import line_icon from "@/assets/img/shape/section-title-line.png";
+import line_icon from "@/assets/img/mch/line.png";
 
 const TeamAreaHome = () => {
   return (

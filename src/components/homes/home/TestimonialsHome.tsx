@@ -36,7 +36,7 @@ const TestimonialsHome = () => {
                             </div>
                             <div className="h4testimonials--author__info">
                               <h5 className="f-600 theme-color">{item.name}</h5>
-                              <span className="f-500 pink-color">{item.job_title}</span>
+                              <span className="f-500 blue-color">{item.job_title}</span>
                             </div>
                           </div>
                         </div>

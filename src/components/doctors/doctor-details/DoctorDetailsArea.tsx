@@ -157,7 +157,7 @@ const DoctorDetailsArea = () => {
                   </div>
                   <div className="team-member-info mt-35 mb-35">
                     <h3><Link href="/doctor-details">{name}</Link></h3>
-                    <h6 className="f-500 text-up-case letter-spacing pink-color">{job_title}</h6>
+                    <h6 className="f-500 text-up-case letter-spacing blue-color">{job_title}</h6>
                   </div>
                   <div className="team-social-profile">
                     <ul>

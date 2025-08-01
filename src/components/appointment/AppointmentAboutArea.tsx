@@ -3,11 +3,11 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import VideoPopup from '@/modals/VideoPopup';
 
-import medical_brand from "@/assets/img/about/medical-brand-icon-border.png";
+import medical_brand from "@/assets/img/mch/medical-brand-icon-border.png";
 import about_avatar from "@/assets/img/about/about-img-3.jpg";
 import about_shape from "@/assets/img/about/about-shape.png";
-import destination_1 from "@/assets/img/about/destination-icon-1.png";
-import destination_2 from "@/assets/img/about/destination-icon-2.png";
+import destination_1 from "@/assets/img/mch/mission.png";
+import destination_2 from "@/assets/img/mch/vision.png";
 
 const appoinment_content = {
   sub_title: "About Us",
@@ -40,7 +40,7 @@ const AppointmentAboutArea = () => {
             <div className="col-xl-6 col-lg-5">
               <div className="about-left-side pos-rel mb-30">
                 <div className="medical-icon-brand-2 medical-icon-brand-3">
-                  <Image src={medical_brand} alt="theme-pure" />
+                  <Image src={medical_brand} alt="theme-pure" className="h-75 w-75"/>
                 </div>
                 <div className="about-front-img pos-rel">
                   <Image src={about_avatar} alt="theme-pure" />
@@ -67,7 +67,7 @@ const AppointmentAboutArea = () => {
                   {features.map((item, i) =>
                     <div key={i} className={`single-item ${i === 0? "mb-30" : ""}`}>
                       <div className="mv-icon f-left">
-                        <Image src={item.img} alt={item.title} />
+                        <Image src={item.img} alt={item.title} className="mission-vision-icon"/>
                       </div>
                       <div className="mv-title fix">
                         <h3>{item.title}</h3>

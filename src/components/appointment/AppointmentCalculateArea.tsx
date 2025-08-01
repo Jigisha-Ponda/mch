@@ -162,7 +162,7 @@ const AppointmentCalculateArea = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="about-title news-letter-title mb-70">
-                        <h5 className="pink-color">Appointment</h5>
+                        <h5 className="blue-color">Appointment</h5>
                         <h1>Book Appointment</h1>
                       </div>
                     </div>

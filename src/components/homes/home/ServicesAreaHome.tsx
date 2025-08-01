@@ -6,9 +6,8 @@ import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import service_overlay from "@/assets/img/home4/services/services__overlay__bg.png";
 import back_icon from "@/assets/img/section/section-back-icon.png";
-import title_line from "@/assets/img/shape/section-title-line.png";
-
-import icon_home_5 from "@/assets/img/icon/h5manage__icon.png";
+import title_line from "@/assets/img/mch/line.png";
+import icon_home_5 from "@/assets/img/mch/specialist-doctors.png";
 
 const setting = {
   dots: true,
@@ -105,7 +104,7 @@ const ServicesAreaHome = ({ style }: any) => {
                       <p className="mb-20"> {item.sm_des} </p>
                       {style ?
                         <div className="h5services-bottom">
-                          <span><i><Image src={icon_home_5} alt="" /></i>
+                          <span className="d-flex"><i><Image src={icon_home_5} alt="" className="specialist-doctors-icon" /></i>
                             <span className="f-500">07 Specialist Doctors</span></span>
                         </div>
                         :
