@@ -5,12 +5,13 @@ import { useClickAway } from "react-use";
 interface Option {
   value: string;
   text: string;
+  disabled:boolean;
 }
 
 type NiceSelectProps = {
   options: Option[];
   defaultCurrent: number;
-  placeholder: string;
+  placeholder?: string;
   className?: string;
   onChange: (item: Option, name: string) => void;
   name: string;

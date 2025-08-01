@@ -5,24 +5,22 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req: NextRequest) {
 
-
   const body = await req.json();
 
   console.log("API Hit");
   console.log("Request body:", body);
 
   const {
-    specialist,
+    specialization,
     doctor,
     shift,
-    consultationType,
+    live,
     date,
-    specialRequest,
+    request,
   } = body;
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.zoho.in',
-    port: 465,
+    service: 'gmail',
     secure: true,
     auth: {
       user: process.env.MAIL_USER,
@@ -33,16 +31,16 @@ export async function POST(req: NextRequest) {
   try {
     const info = await transporter.sendMail({
       from: `"Appointment Booking" <${process.env.MAIL_USER}>`,
-      to: 'info@emphasissoft.com',
+      to: 'jigishaadatiya21@gmail.com',
       subject: 'New Appointment Booking',
       html: `
         <h2>New Appointment Request</h2>
-        <p><strong>Specialist:</strong> ${specialist}</p>
-        <p><strong>Doctor:</strong> ${doctor}</p>
-        <p><strong>Shift:</strong> ${shift}</p>
-        <p><strong>Consultation Type:</strong> ${consultationType}</p>
+        <p><strong>Selected Specialist:</strong> ${specialization}</p>
+        <p><strong>Selected Doctor:</strong> ${doctor}</p>
+        <p><strong>Selected Shift:</strong> ${shift}</p>
+        <p><strong>Live Consultation:</strong> ${live}</p>
         <p><strong>Date:</strong> ${date}</p>
-        <p><strong>Special Request:</strong> ${specialRequest}</p>
+        <p><strong>Special Request:</strong> ${request}</p>
       `,
     });
 

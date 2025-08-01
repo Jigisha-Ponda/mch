@@ -34,127 +34,127 @@ const AppointmentCalculateArea = () => {
     }
   };
 
-  const doctorList: { [key: string]: { value: string; text: string }[] } = {
+  const doctorList: { [key: string]: { value: string; text: string, disabled: boolean }[] } = {
     "1": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false},
     ],
     "2": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false},
     ],
     "3": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "4": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "5": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "6": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "7": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "8": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "9": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "10": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "11": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "12": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "13": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "14": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "15": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false},
     ],
     "16": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "17": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "18": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "19": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "20": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "21": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "22": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "23": [
-      { value: "0", text: "Select Doctor" },
-      { value: "1", text: "Dr. Avinash Kumar(1002)" },
+      { value: "0", text: "Select Doctor", disabled: true },
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
   };
 
 
   const specializationOptions = [
-    { value: "0", text: "Select Specialist" },
-    { value: "1", text: "Obstetrics and gynaecology" },
-    { value: "2", text: "Orthopaedic Surgeon" },
-    { value: "3", text: "Cardiologist" },
-    { value: "4", text: "Paediatrician" },
-    { value: "5", text: "Pulmonologist" },
-    { value: "6", text: "Cardiothoracic Surgeon" },
-    { value: "7", text: "Dermatology" },
-    { value: "8", text: "Endocrinologists" },
-    { value: "9", text: "Gastroenterologists" },
-    { value: "10", text: "Nephrologists" },
-    { value: "11", text: "Neurologists" },
-    { value: "12", text: "Oncologists" },
-    { value: "13", text: "Psychiatrists" },
-    { value: "14", text: "Radiologists" },
-    { value: "15", text: "Rheumatologists" },
-    { value: "16", text: "Urology" },
-    { value: "17", text: "General Medicine" },
-    { value: "18", text: "Audiologist" },
-    { value: "19", text: "Ophthalmologists" },
-    { value: "20", text: "Dentist" },
-    { value: "21", text: "Neuroradiology" },
-    { value: "22", text: "Dermatologists" },
-    { value: "23", text: "Cardiologists" },
+    { value: "0", text: "Select Specialist", disabled:true },
+    { value: "1", text: "Obstetrics and gynaecology",disabled:false },
+    { value: "2", text: "Orthopaedic Surgeon" ,disabled:false},
+    { value: "3", text: "Cardiologist",disabled:false },
+    { value: "4", text: "Paediatrician",disabled:false },
+    { value: "5", text: "Pulmonologist",disabled:false },
+    { value: "6", text: "Cardiothoracic Surgeon",disabled:false },
+    { value: "7", text: "Dermatology",disabled:false },
+    { value: "8", text: "Endocrinologists",disabled:false },
+    { value: "9", text: "Gastroenterologists",disabled:false },
+    { value: "10", text: "Nephrologists",disabled:false },
+    { value: "11", text: "Neurologists",disabled:false },
+    { value: "12", text: "Oncologists",disabled:false },
+    { value: "13", text: "Psychiatrists",disabled:false },
+    { value: "14", text: "Radiologists",disabled:false },
+    { value: "15", text: "Rheumatologists",disabled:false },
+    { value: "16", text: "Urology",disabled:false },
+    { value: "17", text: "General Medicine" ,disabled:false},
+    { value: "18", text: "Audiologist",disabled:false },
+    { value: "19", text: "Ophthalmologists",disabled:false },
+    { value: "20", text: "Dentist",disabled:false },
+    { value: "21", text: "Neuroradiology",disabled:false },
+    { value: "22", text: "Dermatologists",disabled:false },
+    { value: "23", text: "Cardiologists",disabled:false },
   ];
 
   const handleSpecializationChange = (selected: { value: string; text: string }) => {
@@ -165,7 +165,14 @@ const AppointmentCalculateArea = () => {
   const handleDoctorChange = (selected: { value: string; text: string }) => {
     setSelectedDoctor(selected.value);
   };
-
+  const getSpecialistText = (value: string) => {
+    return specializationOptions.find(item => item.value === value)?.text || "N/A";
+  };
+  const getDoctorText = (doctorValue: string) => {
+    const list = doctorList[selectedSpecialization] || [];
+    const match = list.find(doc => doc.value === doctorValue);
+    return match ? match.text : "";
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     let hasError = false;
@@ -202,16 +209,16 @@ const AppointmentCalculateArea = () => {
     if (hasError) return;
 
     const formData = {
-      specialization: selectedSpecialization,
-      doctor: selectedDoctor,
+      specialization: getSpecialistText(selectedSpecialization),
+      doctor: getDoctorText(selectedDoctor),
       shift: selectedShift,
       live: liveConsultation,
       date: appointmentDate,
-      request,
+      request:request,
     };
 
     try {
-      const res = await fetch("/app/api/appointments", {
+      const res = await fetch("/api/appointments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -272,6 +279,7 @@ const AppointmentCalculateArea = () => {
                           value={selectedSpecialization}
                           defaultCurrent={0}
                           onChange={(selected) => {
+                            if (selected.disabled) return;
                             setSelectedSpecialization(selected.value);
                             setSpecializationError(false);
                             setSelectedDoctor("");
@@ -289,12 +297,12 @@ const AppointmentCalculateArea = () => {
                           className={`select_style ${doctorError ? 'error' : ''}`}
                           options={
                             selectedSpecialization === ""
-                              ? [{ value: "", text: "Select Doctor" }]
-                              : doctorList[selectedSpecialization] || [{ value: "", text: "Select Doctor" }]
+                              ? [{ value: "", text: "Select Doctor",disabled:false }]
+                              : doctorList[selectedSpecialization] || [{ value: "", text: "Select Doctor",disabled:false }]
                           }
                           value={selectedDoctor}
                           defaultCurrent={0}
-                          onChange={(selected) => {setSelectedDoctor(selected.value); setDoctorError(false);}}
+                          onChange={(selected) => {if (selected.disabled) return; setSelectedDoctor(selected.value); setDoctorError(false);}}
                           name="doctor"
                           placeholder=""
                         />
@@ -306,11 +314,11 @@ const AppointmentCalculateArea = () => {
                           options={
                             selectedDoctor && selectedDoctor !== "0"
                               ? [
-                                { value: "", text: "Select Shift" },
-                                { value: "morning", text: "Morning" },
-                                { value: "evening", text: "Evening" }
+                                { value: "", text: "Select Shift", disabled:true },
+                                { value: "morning", text: "Morning", disabled:false },
+                                { value: "evening", text: "Evening", disabled:false}
                               ]
-                              : [{ value: "", text: "Select Shift" }]
+                              : [{ value: "", text: "Select Shift",disabled:false }]
                           }
                           value={selectedShift}
                           defaultCurrent={0}
@@ -324,9 +332,9 @@ const AppointmentCalculateArea = () => {
                         <NiceSelect
                          className={`select_style ${liveError ? 'error' : ''}`}
                           options={[
-                            { value: "", text: "Live Consultation" },
-                            { value: "yes", text: "Yes" },
-                            { value: "no", text: "No" },
+                            { value: "", text: "Live Consultation",disabled:false },
+                            { value: "yes", text: "Yes",disabled:false },
+                            { value: "no", text: "No",disabled:false },
                           ]}
                           value={liveConsultation} 
                           defaultCurrent={0}
@@ -342,7 +350,7 @@ const AppointmentCalculateArea = () => {
                             type="date"
                             ref={inputRef}
                             placeholder="Select date"
-                            className="form-control"
+                            className="form-control mb-2"
                             onChange={(e) => {setAppointmentDate(e.target.value); setDateError(false);}}
                             value={appointmentDate} 
                           />
@@ -361,6 +369,7 @@ const AppointmentCalculateArea = () => {
                             cols={30}
                             rows={10}
                             value={request}
+                            className="mb-2"
                             placeholder="Special request"
                             onChange={(e) => {setRequest(e.target.value); setRequestError(false);}}
                           ></textarea>
