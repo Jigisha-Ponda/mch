@@ -91,7 +91,7 @@ const PhotoGalleryHome = () => {
               <div key={i} className="col-lg-4 col-md-6 grid-gallery">
                 <div className="h5gallery__wrapper pos-rel text-center mb-30">
                   <div className="h5gallery-thumb">
-                    <Image className="img" src={item?.img} alt="theme-pure" style={{ height: "415px", width: "100%", objectFit: "cover", objectPosition: "center" }} />
+                    <Image className="img doctors-img" src={item?.img} alt="theme-pure"/>
                   </div>
                   <div className="h5gallery-content">
                     <a className="popup-image"

@@ -3163,6 +3163,13 @@ input[type="date"]::placeholder {
 	color: #647589;
 }
 
+.doctors-img{
+	height: 415px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center; 
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
 	.news-meta span {
 		margin-right: 10px;

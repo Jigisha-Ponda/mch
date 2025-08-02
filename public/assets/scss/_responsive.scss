@@ -365,6 +365,12 @@
 }
 /* Tablet desktop :768px. */
  @media (min-width: 768px) and (max-width: 991px) {
+    .doctors-img{
+        height: 335px!important;
+        width: auto;
+        object-fit: cover;
+        object-position: center; 
+    }
      .hero-text.hero-text-2 {
          padding-top: 150px;
     }
@@ -651,6 +657,12 @@
     .sticky_menu.h3_topBar{
         display: none;
     }
+    .doctors-img{
+        height: 415px!important;
+        width: 100%;
+        object-fit: cover;
+        object-position: center; 
+    }
 }
 // tablet size
 @media (max-width: 991px){
@@ -683,6 +695,12 @@
 }
 /* small mobile :320px. */
  @media (max-width: 767px) {
+    .doctors-img{
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        object-position: center; 
+    }
     .h5medical-tab-menu > nav > .nav button{
         width: 100%;
         margin-bottom: 10px;
@@ -1217,7 +1235,7 @@
          padding-bottom: 70px;
          background-size: cover;
          background-repeat: no-repeat;
-         padding-left: 0;
+         padding-left: 0!important;
          background-position: center;
     }
      .h4about-right {

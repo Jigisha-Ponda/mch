@@ -93,7 +93,7 @@ const HeroAreaHome = ({ style }: any) => {
                         <div className="hero-slider-caption h4hero-content mb-35">
                           <h1 className="white-color" data-animation="fadeInUp" data-delay=".4s">{item.title}</h1>
                           <p className="white-color" data-animation="fadeInUp" data-delay=".6s">{item.sm_des}</p>
-                          <div className="h4-span" data-animation="fadeInUp" data-delay=".8s">
+                          <div className="h4-span mt-4 mt-lg-0" data-animation="fadeInUp" data-delay=".8s">
                             {item.feature_list?.map((feature, index) =>
                               <span key={index} className="white-color">
                                 <i className="fal fa-arrow-circle-right"></i><span>{feature}</span>
