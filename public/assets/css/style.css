@@ -2741,9 +2741,10 @@ li.price-del i {
 	height: 120px;
 }
 
-.appointment-form-3 textarea::placeholder{
-	color:#647589;
+.appointment-form-3 textarea::placeholder {
+	color: #647589;
 }
+
 .appointment-area-3 .calculate-box .nice-select {
 	border: 2px solid #d3e2f0;
 }
@@ -3163,11 +3164,11 @@ input[type="date"]::placeholder {
 	color: #647589;
 }
 
-.doctors-img{
+.doctors-img {
 	height: 415px;
 	width: 100%;
 	object-fit: cover;
-	object-position: center; 
+	object-position: center;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -4051,7 +4052,7 @@ ul.cat li a:hover {
 	background: #ffffff;
 	height: 80px;
 	width: 100%;
-	padding: 0 80px;
+	padding: 0 30px !important;
 	padding-right: 30px;
 	border: 0;
 	color: #aab5ca;
@@ -4067,7 +4068,7 @@ ul.cat li a:hover {
 	text-transform: uppercase;
 	height: 300px;
 	width: 100%;
-	padding: 30px 80px;
+	padding: 30px !important;
 	border: 0;
 }
 
@@ -5591,11 +5592,11 @@ p.checkout-coupon input[type="text"] {
 }
 
 .swal2-confirm .swal2-styled {
-	background-color: #3399FF!important;
+	background-color: #3399FF !important;
 }
 
-div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){
-	background-color: #3399FF!important;
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+	background-color: #3399FF !important;
 }
 
 .select_style.error {

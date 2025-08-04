@@ -42,11 +42,28 @@ const ContactArea = () => {
                 <div className="contact text-center mb-30">
                   <i className={`${item.icon}`}></i>
                   <h3>{item.title}</h3>
-                  <p>{item.info_1}</p>
-                  <p>{item?.info_2}</p>
+                  {/* Handle mail or tel based on title */}
+                  {item.title.toLowerCase().includes("mail") ? (
+                    <p>
+                      <a href={`mailto:${item.info_1}`}>{item.info_1}</a>
+                    </p>
+                  ) : item.title.toLowerCase().includes("call") ? (
+                    <>
+                      <p>
+                        <a href={`tel:${item.info_1}`}>{item.info_1}</a>
+                      </p>
+                      {item.info_2 && (
+                        <p>
+                          <a href={`tel:${item.info_2}`}>{item.info_2}</a>
+                        </p>
+                      )}
+                    </>
+                  ) : (
+                    <p>{item.info_1}</p> // For address
+                  )}
                 </div>
               </div>
-            )} 
+            )}
           </div>
         </div>
       </section>
