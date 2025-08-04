@@ -76,13 +76,13 @@ const ContactForm = () => {
           </div>
           <div className="col-lg-6">
             <div className="form-box email-icon mb-30">
-              <input type="text" name="email" placeholder="Your Email" value={form.email} onChange={handleChange} />
+              <input type="email" name="email" placeholder="Your Email" value={form.email} onChange={handleChange} />
               <p className="form_error">{errors.email && "Email is required"}</p>
             </div>
           </div>
           <div className="col-lg-6">
             <div className="form-box phone-icon mb-30">
-              <input type="text" name="phone" placeholder="Your Phone" value={form.phone} onChange={handleChange} />
+              <input type="number" name="phone" placeholder="Your Phone" value={form.phone} onChange={handleChange} />
               <p className="form_error">{errors.phone && "Phone is required"}</p>
             </div>
           </div>

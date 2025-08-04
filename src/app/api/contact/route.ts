@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong><br/> ${message}</p>
+        <p><strong>Message:</strong> ${message}</p>
       `,
         });
 
