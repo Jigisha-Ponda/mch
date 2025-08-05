@@ -52,6 +52,7 @@ a,
 button {
 	color: #10111e;
 	outline: medium none;
+	cursor: pointer;
 }
 
 a {
@@ -2572,7 +2573,7 @@ li.price-del i {
 	padding-top: 14px;
 	border-radius: 0;
 	border: 2px solid #eee7ff;
-	padding-left: 38px;
+	padding-left: 30px!important;
 	margin-bottom: 20px;
 }
 
@@ -2588,10 +2589,11 @@ li.price-del i {
 
 .calculate-form input {
 	height: 70px;
-	padding-left: 38px;
+	padding-left: 30px!important;
 	width: 100%;
 	border: 2px solid #eee7ff;
 	position: relative;
+	border-radius: 0px!important;
 }
 
 .calculate-form input::placeholder {
@@ -2736,7 +2738,7 @@ li.price-del i {
 	resize: none;
 	border: 2px solid #d3e2f0;
 	padding-top: 28px;
-	padding-left: 40px;
+	padding-left: 30px!important;
 	color: #647589;
 	height: 120px;
 }

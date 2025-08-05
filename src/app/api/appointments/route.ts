@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
   try {
     const info = await transporter.sendMail({
       from: `"Appointment Booking" <${process.env.MAIL_USER}>`,
-      to: 'jigishaadatiya21@gmail.com',
+      to: 'care@mchhospital.com',
       subject: 'New Appointment Booking',
       html: `
         <h2>New Appointment Request</h2>

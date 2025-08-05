@@ -64,10 +64,13 @@ const NiceSelect: FC<NiceSelectProps> = ({
             data-value={item.value}
             className={`option ${
               item.value === current?.value ? "selected focus" : ""
-            }`}
+            } ${item.disabled ? "disabled" : ""}`}
             style={{fontSize: '14px'}}
             role="menuitem"
-            onClick={() => currentHandler(item)}
+            onClick={() => {
+              if (item.disabled) return; 
+              currentHandler(item);
+            }}
             onKeyDown={(e) => e}
           >
             {item.text}

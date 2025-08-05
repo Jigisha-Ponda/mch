@@ -5,10 +5,13 @@ import Swal from 'sweetalert2';
 
 const AppointmentCalculateArea = () => {
   const selectHandler = (e: any) => { };
-  const [selectedSpecialization, setSelectedSpecialization] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [resetCounter, setResetCounter] = useState(0);
+
+  const [selectedSpecialization, setSelectedSpecialization] = useState("0");
   const [specializationError, setSpecializationError] = useState(false);
 
-  const [selectedDoctor, setSelectedDoctor] = useState("");
+  const [selectedDoctor, setSelectedDoctor] = useState("0");
   const [doctorError, setDoctorError] = useState(false);
 
   const [selectedShift, setSelectedShift] = useState("");
@@ -37,11 +40,11 @@ const AppointmentCalculateArea = () => {
   const doctorList: { [key: string]: { value: string; text: string, disabled: boolean }[] } = {
     "1": [
       { value: "0", text: "Select Doctor", disabled: true },
-      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false},
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "2": [
       { value: "0", text: "Select Doctor", disabled: true },
-      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false},
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "3": [
       { value: "0", text: "Select Doctor", disabled: true },
@@ -93,7 +96,7 @@ const AppointmentCalculateArea = () => {
     ],
     "15": [
       { value: "0", text: "Select Doctor", disabled: true },
-      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false},
+      { value: "1", text: "Dr. Avinash Kumar(1002)", disabled: false },
     ],
     "16": [
       { value: "0", text: "Select Doctor", disabled: true },
@@ -131,30 +134,30 @@ const AppointmentCalculateArea = () => {
 
 
   const specializationOptions = [
-    { value: "0", text: "Select Specialist", disabled:true },
-    { value: "1", text: "Obstetrics and gynaecology",disabled:false },
-    { value: "2", text: "Orthopaedic Surgeon" ,disabled:false},
-    { value: "3", text: "Cardiologist",disabled:false },
-    { value: "4", text: "Paediatrician",disabled:false },
-    { value: "5", text: "Pulmonologist",disabled:false },
-    { value: "6", text: "Cardiothoracic Surgeon",disabled:false },
-    { value: "7", text: "Dermatology",disabled:false },
-    { value: "8", text: "Endocrinologists",disabled:false },
-    { value: "9", text: "Gastroenterologists",disabled:false },
-    { value: "10", text: "Nephrologists",disabled:false },
-    { value: "11", text: "Neurologists",disabled:false },
-    { value: "12", text: "Oncologists",disabled:false },
-    { value: "13", text: "Psychiatrists",disabled:false },
-    { value: "14", text: "Radiologists",disabled:false },
-    { value: "15", text: "Rheumatologists",disabled:false },
-    { value: "16", text: "Urology",disabled:false },
-    { value: "17", text: "General Medicine" ,disabled:false},
-    { value: "18", text: "Audiologist",disabled:false },
-    { value: "19", text: "Ophthalmologists",disabled:false },
-    { value: "20", text: "Dentist",disabled:false },
-    { value: "21", text: "Neuroradiology",disabled:false },
-    { value: "22", text: "Dermatologists",disabled:false },
-    { value: "23", text: "Cardiologists",disabled:false },
+    { value: "0", text: "Select Specialist", disabled: true },
+    { value: "1", text: "Obstetrics and gynaecology", disabled: false },
+    { value: "2", text: "Orthopaedic Surgeon", disabled: false },
+    { value: "3", text: "Cardiologist", disabled: false },
+    { value: "4", text: "Paediatrician", disabled: false },
+    { value: "5", text: "Pulmonologist", disabled: false },
+    { value: "6", text: "Cardiothoracic Surgeon", disabled: false },
+    { value: "7", text: "Dermatology", disabled: false },
+    { value: "8", text: "Endocrinologists", disabled: false },
+    { value: "9", text: "Gastroenterologists", disabled: false },
+    { value: "10", text: "Nephrologists", disabled: false },
+    { value: "11", text: "Neurologists", disabled: false },
+    { value: "12", text: "Oncologists", disabled: false },
+    { value: "13", text: "Psychiatrists", disabled: false },
+    { value: "14", text: "Radiologists", disabled: false },
+    { value: "15", text: "Rheumatologists", disabled: false },
+    { value: "16", text: "Urology", disabled: false },
+    { value: "17", text: "General Medicine", disabled: false },
+    { value: "18", text: "Audiologist", disabled: false },
+    { value: "19", text: "Ophthalmologists", disabled: false },
+    { value: "20", text: "Dentist", disabled: false },
+    { value: "21", text: "Neuroradiology", disabled: false },
+    { value: "22", text: "Dermatologists", disabled: false },
+    { value: "23", text: "Cardiologists", disabled: false },
   ];
 
   const handleSpecializationChange = (selected: { value: string; text: string }) => {
@@ -214,8 +217,10 @@ const AppointmentCalculateArea = () => {
       shift: selectedShift,
       live: liveConsultation,
       date: appointmentDate,
-      request:request,
+      request: request,
     };
+
+    setLoading(true);
 
     try {
       const res = await fetch("/api/appointments", {
@@ -228,9 +233,10 @@ const AppointmentCalculateArea = () => {
         Swal.fire("Success!", "Appointment submitted successfully.", "success");
         // Reset
         setSelectedSpecialization("");
-        setSelectedDoctor("");
-        setSelectedShift("");
-        setLiveConsultation("");
+        setResetCounter(prev => prev + 1);
+        setSelectedDoctor("0");
+        setSelectedShift("0");
+        setLiveConsultation("0");
         setAppointmentDate("");
         setRequest("");
 
@@ -246,6 +252,9 @@ const AppointmentCalculateArea = () => {
       }
     } catch (err) {
       Swal.fire("Error", "Something went wrong!", "error");
+    }
+    finally {
+      setLoading(false); // Stop loader
     }
   };
 
@@ -274,6 +283,7 @@ const AppointmentCalculateArea = () => {
                     <div className="row">
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <NiceSelect
+                          key={resetCounter}
                           className={`select_style ${specializationError ? 'error' : ''}`}
                           options={specializationOptions}
                           value={selectedSpecialization}
@@ -297,12 +307,12 @@ const AppointmentCalculateArea = () => {
                           className={`select_style ${doctorError ? 'error' : ''}`}
                           options={
                             selectedSpecialization === ""
-                              ? [{ value: "", text: "Select Doctor",disabled:false }]
-                              : doctorList[selectedSpecialization] || [{ value: "", text: "Select Doctor",disabled:false }]
+                              ? [{ value: "", text: "Select Doctor", disabled: false }]
+                              : doctorList[selectedSpecialization] || [{ value: "", text: "Select Doctor", disabled: false }]
                           }
                           value={selectedDoctor}
                           defaultCurrent={0}
-                          onChange={(selected) => {if (selected.disabled) return; setSelectedDoctor(selected.value); setDoctorError(false);}}
+                          onChange={(selected) => { if (selected.disabled) return; setSelectedDoctor(selected.value); setDoctorError(false); }}
                           name="doctor"
                           placeholder=""
                         />
@@ -310,19 +320,20 @@ const AppointmentCalculateArea = () => {
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <NiceSelect
-                            className={`select_style ${shiftError ? 'error' : ''}`}
+                          key={selectedShift || "shift-default"} // This resets when selectedShift is reset
+                          className={`select_style ${shiftError ? 'error' : ''}`}
                           options={
                             selectedDoctor && selectedDoctor !== "0"
                               ? [
-                                { value: "", text: "Select Shift", disabled:true },
-                                { value: "morning", text: "Morning", disabled:false },
-                                { value: "evening", text: "Evening", disabled:false}
+                                { value: "0", text: "Select Shift", disabled: true },
+                                { value: "morning", text: "Morning", disabled: false },
+                                { value: "evening", text: "Evening", disabled: false },
                               ]
-                              : [{ value: "", text: "Select Shift",disabled:false }]
+                              : [{ value: "", text: "Select Shift", disabled: false }]
                           }
                           value={selectedShift}
                           defaultCurrent={0}
-                          onChange={(selected) => {setSelectedShift(selected.value); setShiftError(false);}}
+                          onChange={(selected) => { setSelectedShift(selected.value); setShiftError(false); }}
                           name="shift"
                           placeholder=""
                         />
@@ -330,15 +341,16 @@ const AppointmentCalculateArea = () => {
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <NiceSelect
-                         className={`select_style ${liveError ? 'error' : ''}`}
+                          key={liveConsultation || "live-default"}
+                          className={`select_style ${liveError ? 'error' : ''}`}
                           options={[
-                            { value: "", text: "Live Consultation",disabled:false },
-                            { value: "yes", text: "Yes",disabled:false },
-                            { value: "no", text: "No",disabled:false },
+                            { value: "0", text: "Live Consultation", disabled: false },
+                            { value: "yes", text: "Yes", disabled: false },
+                            { value: "no", text: "No", disabled: false },
                           ]}
-                          value={liveConsultation} 
+                          value={liveConsultation}
                           defaultCurrent={0}
-                          onChange={(selected) => {setLiveConsultation(selected.value); setLiveError(false);}}
+                          onChange={(selected) => { setLiveConsultation(selected.value); setLiveError(false); }}
                           name="live"
                           placeholder="Live Consultation"
                         />
@@ -350,9 +362,9 @@ const AppointmentCalculateArea = () => {
                             type="date"
                             ref={inputRef}
                             placeholder="Select date"
-                            className="form-control mb-2"
-                            onChange={(e) => {setAppointmentDate(e.target.value); setDateError(false);}}
-                            value={appointmentDate} 
+                            className="form-control mb-3"
+                            onChange={(e) => { setAppointmentDate(e.target.value); setDateError(false); }}
+                            value={appointmentDate}
                           />
                           <i
                             className="far fa-calendar"
@@ -369,15 +381,19 @@ const AppointmentCalculateArea = () => {
                             cols={30}
                             rows={10}
                             value={request}
-                            className="mb-2"
+                            className="mb-3"
                             placeholder="Special request"
-                            onChange={(e) => {setRequest(e.target.value); setRequestError(false);}}
+                            onChange={(e) => { setRequest(e.target.value); setRequestError(false); }}
                           ></textarea>
                           <i className="far fa-edit"></i>
                           {requestError && <p className="text-danger">Please enter a special request.</p>}
-                          <button type="submit" className="primary_btn btn mt-40">
-                            Submit Query
+                          <button type="submit" className="primary_btn btn mt-40" disabled={loading}>
+                            {loading && (
+                              <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            )}
+                            {loading ? "Submitting..." : "Submit Query"}
                           </button>
+
                         </div>
                       </div>
                     </div>
