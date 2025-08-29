@@ -7,6 +7,10 @@ import gallery_thumb_3 from "@/assets/img/mch/dr-rohit-kumar.webp";
 import gallery_thumb_4 from "@/assets/img/mch/dr.webp";
 import gallery_thumb_5 from "@/assets/img/mch/dr-kumari-ruchika.webp"; 
 import gallery_thumb_6 from "@/assets/img/mch/dr-avinash-kumar.webp"; 
+import dr_1 from "@/assets/img/mch/dr-1.jpeg";
+import dr_2 from "@/assets/img/mch/dr-2.jpeg";
+import dr_3 from "@/assets/img/mch/dr-3.jpeg";
+import dr_4 from "@/assets/img/mch/dr-4.jpeg";
 import { StaticImageData } from "next/image";
 
 
@@ -69,38 +73,38 @@ const photo_gallery_data: DataType[] = [
     tag_1: "medical",
     tag_2: "Dental",
   },
-  // {
-  //   id: 3, 
-  //   img: gallery_thumb_3,
-  //   category: "Dental",
-  //   title: "Dental Services",
-  //   tag_1: "medical",
-  //   tag_2: "Dental",
-  // },
-  // {
-  //   id: 4, 
-  //   img: gallery_thumb_4,
-  //   category: "Surgery",
-  //   title: "Dental Services",
-  //   tag_1: "medical",
-  //   tag_2: "Dental",
-  // },
-  // {
-  //   id: 5, 
-  //   img: gallery_thumb_5,
-  //   category: "Dental",
-  //   title: "Dental Services",
-  //   tag_1: "medical",
-  //   tag_2: "Medicin",
-  // },
-  // {
-  //   id: 6, 
-  //   img: gallery_thumb_6,
-  //   category: "Medicin",
-  //   title: "Dental Services",
-  //   tag_1: "medical",
-  //   tag_2: "Dental",
-  // },
+  {
+    id: 7, 
+    img: dr_1,
+    category: "Doctors Gallery",
+    title: "Doctors Gallery",
+    tag_1: "medical",
+    tag_2: "Dental",
+  },
+  {
+    id: 8, 
+    img: dr_2,
+    category: "Doctors Gallery",
+    title: "Doctors Gallery",
+    tag_1: "medical",
+    tag_2: "Dental",
+  },
+  {
+    id: 9, 
+    img: dr_3,
+    category: "Doctors Gallery",
+    title: "Doctors Gallery",
+    tag_1: "medical",
+    tag_2: "Medicin",
+  },
+  {
+    id: 10, 
+    img: dr_4,
+    category: "Doctors Gallery",
+    title: "Doctors Gallery",
+    tag_1: "medical",
+    tag_2: "Dental",
+  },
   // update
   // {
   //   id: 1, 
