@@ -137,6 +137,7 @@ const PhotoGalleryHome = () => {
         />
       )}
       {/* image light box end */}
+
     </>
   );
 };

@@ -1893,6 +1893,39 @@ li.price-del i {
 	font-weight: 500;
 }
 
+.latest-news-area .video-wrapper {
+	position: relative;
+	width: 100%;
+	padding-bottom: 160.78%;
+	background: #000;
+	overflow: hidden;
+}
+
+.latest-news-area .video-wrapper iframe {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	border: none;
+	transform: translate(-50%, -50%);
+	object-fit:cover;
+}
+
+.latest-news-area .video-wrapper.horizontal iframe {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 37%;
+	margin:auto;
+	border: none;
+	transform: translate(-50%, -50%);
+}
+.latest-news-area .video-wrapper.horizontal iframe {
+	object-fit: contain; /* shows full video with black bars */
+  }
+
 .latest-news-content h3 {
 	font-size: 22px;
 	line-height: 1.3;
@@ -2573,7 +2606,7 @@ li.price-del i {
 	padding-top: 14px;
 	border-radius: 0;
 	border: 2px solid #eee7ff;
-	padding-left: 30px!important;
+	padding-left: 30px !important;
 	margin-bottom: 20px;
 }
 
@@ -2589,11 +2622,11 @@ li.price-del i {
 
 .calculate-form input {
 	height: 70px;
-	padding-left: 30px!important;
+	padding-left: 30px !important;
 	width: 100%;
 	border: 2px solid #eee7ff;
 	position: relative;
-	border-radius: 0px!important;
+	border-radius: 0px !important;
 }
 
 .calculate-form input::placeholder {
@@ -2738,7 +2771,7 @@ li.price-del i {
 	resize: none;
 	border: 2px solid #d3e2f0;
 	padding-top: 28px;
-	padding-left: 30px!important;
+	padding-left: 30px !important;
 	color: #647589;
 	height: 120px;
 }

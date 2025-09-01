@@ -36,7 +36,7 @@ const Home = () => {
         {/* <HowItWorksHome /> */}
         {/* <TestimonialsHome /> */}
         {/* <CounterHome /> */}
-        {/* <LatestNewsAreaHome /> */}
+        <LatestNewsAreaHome />
         {/* <BrandAreaHome /> */}
       </main>
       <Footer/>

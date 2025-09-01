@@ -23,8 +23,8 @@ const LatestNewsAreaHome = () => {
                   />
                 </div>
                 <div className="section-text pos-rel">
-                  <h5>News</h5>
-                  <h1>Get Every Single Updates Here.</h1>
+                  <h5>Latest Videos</h5>
+                  <h1>Follow Our News & Events</h1>
                 </div>
                 <div className="section-line pos-rel">
                   <Image src={title_line} alt="" />
@@ -32,8 +32,8 @@ const LatestNewsAreaHome = () => {
               </div>
             </div>
           </div>
-          <div className="row">
-            {news_data.map((item, i) =>
+          <div className="row justify-content-center">
+            {/* {news_data.map((item, i) =>
               <div key={i} className="col-xl-4 col-lg-6 col-md-6">
                 <div className="h4latestnews-box pos-rel fix mb-30">
                   <div className="h4latestnews-bg">
@@ -69,7 +69,37 @@ const LatestNewsAreaHome = () => {
                   </div>
                 </div>
               </div>
-            )} 
+            )}  */}
+
+            {/* Vertical Reel */}
+            <div className="col-xl-4 col-lg-6 col-md-6">
+              <div className="h4latestnews-box pos-rel fix mb-30">
+                <div className="video-wrapper vertical">
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F966840285567272%2F&show_text=false"
+                    scrolling="no"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Horizontal Video */}
+            <div className="col-xl-4 col-lg-6 col-md-6">
+              <div className="h4latestnews-box pos-rel fix mb-30">
+                <div className="video-wrapper horizontal">
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F646862417300925%2F&show_text=false"
+                    scrolling="no"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
