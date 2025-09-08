@@ -14,7 +14,7 @@ import MedicalTabHome from './MedicalTabHome';
 import HowItWorksHome from './HowItWorksHome';
 import TestimonialsHome from './TestimonialsHome';
 import CounterHome from './CounterHome';
-import LatestNewsAreaHome from './LatestNewsAreaHome';
+// import LatestNewsAreaHome from './LatestNewsAreaHome';
 import BrandAreaHome from './BrandAreaHome';
 import Footer from '@/layout/footers/Footer';
 
@@ -36,7 +36,7 @@ const Home = () => {
         {/* <HowItWorksHome /> */}
         {/* <TestimonialsHome /> */}
         {/* <CounterHome /> */}
-        <LatestNewsAreaHome />
+        {/* <LatestNewsAreaHome /> */}
         {/* <BrandAreaHome /> */}
       </main>
       <Footer/>

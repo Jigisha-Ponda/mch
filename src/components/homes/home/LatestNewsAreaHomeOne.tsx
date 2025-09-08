@@ -151,7 +151,6 @@ const LatestNewsAreaHomeOne = ({style}: DataType) => {
               </div>              
               }
             </div>
-
           </div>
         </div>
       </section>
